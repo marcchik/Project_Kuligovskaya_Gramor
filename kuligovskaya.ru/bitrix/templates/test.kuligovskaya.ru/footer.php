@@ -7,7 +7,7 @@
         <div class="footer__top">
             <div class="header__wrap">
                 <a href="index.html" class="logo">
-                    <img src="./img/main/logo.svg">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/logo.svg">
                 </a>
                 <div class="header__des">
                     <div class="header__row">
@@ -47,7 +47,7 @@
                         <div class="header__mid">
                             <a href="" class="header__location">
                                 <div class="header__location__img">
-                                    <img src="./img/main/location.png">
+                                    <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/location.png">
                                 </div>
                                 <div class="header__location__text">
                                     Екатеринбург, FC Limerance, оф.703
@@ -58,21 +58,21 @@
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="./img/sprite.svg#what"></use>
+                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#what"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="./img/sprite.svg#tg"></use>
+                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#tg"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="./img/sprite.svg#phone"></use>
+                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -87,15 +87,15 @@
                 <div class="header__mob">
                     <a href="" class="header__mob__phone">
                         <svg width="14" height="14">
-                            <use xlink:href="./img/sprite.svg#phone"></use>
+                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
                         </svg>
                     </a>
                     <button type="button" class="burger btn-reset" id="burger-footer">
                         <svg width="18" height="10" class="burger-open">
-                            <use xlink:href="./img/sprite.svg#burger-open"></use>
+                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-open"></use>
                         </svg>
                         <svg width="24" height="24" class="burger-close">
-                            <use xlink:href="./img/sprite.svg#burger-close"></use>
+                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                         </svg>
                     </button>
                 </div>
@@ -121,7 +121,7 @@
                 <button type="button" class="close_modal_form btn-reset active"
                         onclick="CloseModal('ask_questions')">
                     <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="./img/sprite.svg#burger-close"></use>
+                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                     </svg>
                 </button>
             </div>
@@ -185,7 +185,7 @@
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('ask_viewing')">
                     <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="./img/sprite.svg#burger-close"></use>
+                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                     </svg>
                 </button>
             </div>
@@ -263,7 +263,7 @@
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('info_modal')">
                     <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="./img/sprite.svg#burger-close"></use>
+                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                     </svg>
                 </button>
             </div>
@@ -292,7 +292,7 @@
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('sank_ask')">
                     <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="./img/sprite.svg#burger-close"></use>
+                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                     </svg>
                 </button>
             </div>
@@ -309,7 +309,7 @@
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('sank_review')">
                     <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="./img/sprite.svg#burger-close"></use>
+                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
                     </svg>
                 </button>
             </div>
@@ -321,9 +321,9 @@
     </div>
 </section>
 </div>
-<script src="./js/libs/jquery.min.js"></script>
-<script src="./js/vendor.js"></script>
-<script src="./js/main.js"></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/libs/jquery.min.js"></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/vendor.js"></script>
+<script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js"></script>
 </body>
 
 </html>
