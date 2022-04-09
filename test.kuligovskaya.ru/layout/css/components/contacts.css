@@ -1,0 +1,131 @@
+.contacts_map {
+  margin-top: 63px;
+}
+.contacts_map #map:after {
+  display: none;
+}
+.contacts_map #map:before {
+  display: none;
+}
+
+.contacts_items {
+  position: relative;
+}
+
+.contacts_items::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  height: 450px;
+  width: 45%;
+  opacity: 1;
+  top: -60px;
+  background: radial-gradient(50% 50% at 50% 50%, #c4c4c400 0%, #181818 100%);
+}
+
+.contacts_items::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 0;
+  height: 450px;
+  width: 45%;
+  opacity: 0.15;
+  background: url(/img/main/mask_38.png) no-repeat center;
+  background-size: cover;
+}
+
+.contacts {
+  overflow: hidden;
+}
+.contacts .contacts_items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 66px;
+}
+.contacts .contacts_item {
+  width: calc(33% - 15px);
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.contacts .mini_title_contacts_item {
+  opacity: 0.5;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 300;
+}
+.contacts .title_contacts_item {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+.contacts .work_time_items {
+  margin-top: 22px;
+}
+.contacts .work_time_item {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 150%;
+  opacity: 0.9;
+}
+.contacts .btn_modal_form {
+  background: #3C4AD2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 306px;
+  height: 70px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .contacts .contacts_items {
+    flex-wrap: wrap;
+  }
+  .contacts .contacts_item {
+    width: calc(50% - 15px);
+  }
+  .contacts .contacts_item:nth-child(1) {
+    order: 0;
+  }
+  .contacts .contacts_item:nth-child(2) {
+    order: 2;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .contacts .contacts_item:nth-child(3) {
+    order: 1;
+  }
+}
+@media (max-width: 767px) {
+  .contacts_map {
+    margin-top: 46px;
+  }
+
+  .contacts .contacts_items {
+    margin-bottom: 35px;
+  }
+  .contacts .contacts_item {
+    width: 100%;
+    margin-top: 35px;
+  }
+  .contacts .contacts_item:first-child {
+    margin-top: 0;
+  }
+  .contacts .mini_title_contacts_item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 350px) {
+  .contacts .title_contacts_item {
+    font-size: 26px;
+  }
+}
+/*# sourceMappingURL=contacts.css.map */

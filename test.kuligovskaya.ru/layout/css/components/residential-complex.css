@@ -1,0 +1,1135 @@
+.about_residential_complex {
+  position: relative;
+}
+.about_residential_complex .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.about_residential_complex::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 10%;
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+  top: 50px;
+  background: #3C4AD2;
+  opacity: 0.2;
+  filter: blur(254px);
+}
+
+.about_company_residential_complex {
+  position: relative;
+}
+.about_company_residential_complex .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.about_company_residential_complex::after {
+  content: "";
+  position: absolute;
+  display: block;
+  right: 10%;
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+  z-index: 1;
+  top: 50px;
+  background: #3C4AD2;
+  opacity: 0.2;
+  filter: blur(254px);
+}
+
+.preview_residential_complex {
+  margin-top: -246px;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+}
+.preview_residential_complex .background_shape_preview_residential_complex {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.preview_residential_complex .background_shape_preview_residential_complex img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.preview_residential_complex .background_shape_preview_residential_complex:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: url(/img/main/76.png) no-repeat center;
+  background-position: right;
+  background-size: cover;
+}
+.preview_residential_complex .background_shape_preview_residential_complex:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0.56;
+  background: url(/img/main/86.png) no-repeat bottom;
+  background-size: cover;
+}
+.preview_residential_complex .wrap {
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.preview_residential_complex .title_h1 {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 99.52%;
+  color: white;
+}
+.preview_residential_complex .full_price {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 99.52%;
+  margin-top: 23px;
+  color: white;
+}
+.preview_residential_complex .full_price span {
+  font-size: 14px;
+}
+.preview_residential_complex .square_price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 7px;
+}
+.preview_residential_complex .text_preview_residential_complex {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 450px;
+}
+.preview_residential_complex .btn_preview_residential_complex {
+  width: 317px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3C4AD2;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.params_residential_complex {
+  padding: 72px 0 18px;
+}
+.params_residential_complex .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.params_residential_complex .item_params_residential_complex {
+  width: calc(33% - 15px);
+  display: flex;
+  align-items: center;
+  margin-bottom: 58px;
+}
+.params_residential_complex .item_params_residential_complex .icon_item_params_residential_complex {
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2C2C2C;
+}
+.params_residential_complex .item_params_residential_complex .icon_item_params_residential_complex img {
+  width: 47px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.params_residential_complex .item_params_residential_complex .info_item_params_residential_complex {
+  margin-left: 28px;
+  width: calc(100% - 121px);
+}
+.params_residential_complex .item_params_residential_complex .mini_tile_item_params_residential_complex {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+.params_residential_complex .item_params_residential_complex .text_item_params_residential_complex {
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 1;
+  margin-top: 5px;
+  color: white;
+}
+.params_residential_complex .item_params_residential_complex .text_item_params_residential_complex span {
+  font-size: 30px;
+}
+
+.about_residential_complex {
+  padding-bottom: 120px;
+}
+.about_residential_complex .row_top_about_residential_complex {
+  display: flex;
+  align-items: center;
+}
+.about_residential_complex .row_top_about_residential_complex .title_about_residential_complex {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  padding: 0 60px 0 0;
+  background: #3C4AD2;
+  position: relative;
+  font-weight: 400;
+  font-size: 36px;
+  color: white;
+  line-height: 1;
+  margin-right: 60px;
+}
+.about_residential_complex .row_top_about_residential_complex .title_about_residential_complex:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 2000px;
+  background: #3C4AD2;
+}
+.about_residential_complex .row_top_about_residential_complex .tabs_about_residential_complex__nav {
+  display: flex;
+  align-items: center;
+}
+.about_residential_complex .row_top_about_residential_complex .tabs_about_residential_complex__nav li {
+  padding: 17px 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.25s;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  margin-right: 40px;
+}
+.about_residential_complex .row_top_about_residential_complex .tabs_about_residential_complex__nav li:hover {
+  color: white;
+}
+.about_residential_complex .row_top_about_residential_complex .tabs_about_residential_complex__nav li.active {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.about_residential_complex .tabs_about_residential_complex__content {
+  display: none;
+  padding-top: 66px;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_residential_complex .tabs_about_residential_complex__content.active {
+  display: flex;
+}
+.about_residential_complex .video_box_residential_complex {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.about_residential_complex .video_box_residential_complex span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 101px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.about_residential_complex .info_box_residential_complex {
+  width: calc(100% - 525px);
+  min-height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about_residential_complex .info_box_residential_complex .text_residential_complex {
+  max-width: 560px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.catalog .title_catalog {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: white;
+  margin-bottom: 46px;
+}
+.catalog .filtr_catalog {
+  padding: 33px 25px;
+  background: #3C4AD2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog .filtr_catalog .title_filtr_catalog {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  color: white;
+}
+.catalog .filtr_catalog .select-selected {
+  color: white;
+  padding: 17px 35px 17px 20px;
+  border: 1px solid white;
+}
+.catalog .filtr_catalog .select-selected:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 6px);
+  transform: rotate(45deg);
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: white;
+}
+.catalog .filtr_catalog .custom-select {
+  width: calc(20% - 45px);
+}
+.catalog .top_sort_catalog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.catalog .items_box_catalog {
+  padding-top: 40px;
+}
+.catalog .bottom_sort_catalog {
+  padding-top: 40px;
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog .item_box_catalog {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.catalog .item_box_catalog .photos_item_box_catalog {
+  width: 400px;
+  height: 245px;
+  overflow: hidden;
+}
+.catalog .item_box_catalog .swiper {
+  height: 100%;
+}
+.catalog .item_box_catalog .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.catalog .item_box_catalog .photo_item_slide {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.catalog .item_box_catalog .swiper-slide:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: url(/img/main/light67.png) no-repeat center;
+  background-position: right;
+  background-size: cover;
+}
+.catalog .item_box_catalog .swiper-slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: url(/img/main/light55.png) no-repeat bottom;
+  background-size: cover;
+}
+.catalog .item_box_catalog .info_item_box_catalog {
+  width: calc(100% - 450px);
+}
+.catalog .item_box_catalog .top_info_item_box_catalog {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog .item_box_catalog .title_top_info_item_box_catalog {
+  font-weight: 400;
+  max-width: 350px;
+  font-size: 24px;
+  color: white;
+  line-height: 1;
+}
+.catalog .item_box_catalog .params_top_info_item_box_catalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog .item_box_catalog .item_param_top_info_item_box_catalog {
+  background: white;
+  color: #181818;
+  padding: 6px 20px;
+  margin-left: 5px;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 5px;
+  line-height: 18px;
+}
+.catalog .item_box_catalog .bottom_info_item_box_catalog {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.catalog .item_box_catalog .left_bottom_info_item_box_catalog {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 310px);
+}
+.catalog .item_box_catalog .swiper-pagination-bullet-active {
+  background: white;
+}
+.catalog .item_box_catalog .company_box {
+  width: 50%;
+}
+.catalog .item_box_catalog .logo_name_company_box {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.catalog .item_box_catalog .logo_company_box {
+  width: 46px;
+  height: 46px;
+  background: #C4C4C4;
+  border-radius: 50%;
+  margin-right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.catalog .item_box_catalog .logo_company_box img {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.catalog .item_box_catalog .params_item_catalog {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalog .item_box_catalog .item_params_item_catalog {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 40px;
+}
+.catalog .item_box_catalog .mini_title_item_params_item_catalog {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.catalog .item_box_catalog .icon_text_item_params_item_catalog {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.catalog .item_box_catalog .icon_item_params_item_catalog {
+  width: 23px;
+  height: 23px;
+  margin-right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.catalog .item_box_catalog .icon_item_params_item_catalog img {
+  max-height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.catalog .item_box_catalog .text_item_params_item_catalog {
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.catalog .item_box_catalog .name_company_box {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: white;
+}
+.catalog .item_box_catalog .mini_title_company_box {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.catalog .item_box_catalog .adress_box {
+  width: calc(50% - 20px);
+}
+.catalog .item_box_catalog .mini_title_adress_box {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.catalog .item_box_catalog .text_adress_box {
+  font-weight: 400;
+  max-width: 200px;
+  font-size: 16px;
+  color: white;
+  line-height: 1;
+  margin-top: 15px;
+}
+.catalog .item_box_catalog .right_bottom_info_item_box_catalog {
+  width: 310px;
+  padding-left: 90px;
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+.catalog .item_box_catalog .mini_title_price_box_right_bottom_info_catalog {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.catalog .item_box_catalog .full_price_price_box_right_bottom_info_catalog {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: white;
+}
+.catalog .item_box_catalog .btn_price_box_right_bottom_info_catalog {
+  margin-top: 23px;
+  border: 1px solid #3C4AD2;
+  width: 218px;
+  height: 50px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 18px;
+  color: white;
+}
+.catalog .item_box_catalog .mini_btn_ipoteka_bottom_info_catalog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+  width: 218px;
+}
+
+.gallery_residential_complex {
+  margin-top: 70px;
+}
+.gallery_residential_complex .main-gallery__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.gallery_residential_complex .main-gallery__item__text {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 30px 30px;
+  color: white;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  opacity: 1;
+}
+.gallery_residential_complex .main-gallery__item__title {
+  color: white;
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  line-height: 1;
+  padding: 0 30px;
+}
+.gallery_residential_complex .h-title {
+  margin-bottom: 50px;
+}
+
+.about_company_residential_complex .wrap {
+  display: flex;
+  align-items: center;
+}
+.about_company_residential_complex .logo_box_about_company {
+  width: 450px;
+  background: white;
+  margin-right: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 70px 20px 90px 0;
+}
+.about_company_residential_complex .logo_box_about_company:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 2000px;
+  background: white;
+}
+.about_company_residential_complex .icon_logo_box_about_company {
+  width: 94px;
+  height: 94px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.about_company_residential_complex .icon_logo_box_about_company img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.about_company_residential_complex .mini_title_text_logo_box_about_company {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #181818;
+  opacity: 0.76;
+  margin-bottom: 5px;
+}
+.about_company_residential_complex .title_text_logo_box_about_company {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+  color: #181818;
+}
+.about_company_residential_complex .text_logo_box_about_company {
+  width: calc(100% - 115px);
+}
+.about_company_residential_complex .info_about_company {
+  width: calc(100% - 520px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about_company_residential_complex .number_items_info_about_company {
+  display: flex;
+}
+.about_company_residential_complex .number_item_info_about_company {
+  margin-right: 80px;
+}
+.about_company_residential_complex .number_item_info_about_company:last-child {
+  margin-right: 0px;
+}
+.about_company_residential_complex .number_info_about_company {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 95px;
+  line-height: 1;
+  color: white;
+}
+.about_company_residential_complex .text_info_about_company {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about_company_residential_complex .big_text_info_about_company {
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.company_residential_complex {
+  padding-bottom: 0;
+}
+.company_residential_complex .h-title {
+  padding-top: 80px;
+  margin-top: 58px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+.company_residential_complex .company__numbers {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+.company_residential_complex .company__numbers__item {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.faq {
+  margin-top: 90px;
+}
+.faq .title_faq {
+  padding: 57px 140px 57px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1;
+  color: white;
+  background: #3C4AD2;
+}
+.faq .title_faq:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  width: 2000px;
+  background: #3C4AD2;
+}
+.faq .faq__list {
+  margin-top: 70px;
+}
+.faq .faq__row {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+}
+.faq .faq__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.faq .title_faq__header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+  width: calc(100% - 85px);
+}
+.faq .faq__btn {
+  width: 65px;
+  min-width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: #2C2C2C;
+  border: none;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.faq .faq__btn:focus {
+  outline: navajowhite;
+}
+.faq .faq__btn.active svg {
+  transform: rotate(180deg);
+}
+.faq .faq__btn:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.faq .faq__span {
+  color: #FFFFFF;
+  opacity: 0.5;
+  margin-bottom: 7px;
+}
+.faq .faq__body {
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.back_call_residential_complex {
+  padding-bottom: 0;
+}
+
+@media (max-width: 1100px) {
+  .preview_residential_complex {
+    display: flex;
+    align-items: flex-end;
+  }
+  .preview_residential_complex .wrap {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .preview_residential_complex .info_box_preview_residential_complex {
+    width: 100%;
+  }
+  .preview_residential_complex .text_preview_residential_complex {
+    margin: 20px 0;
+  }
+
+  .params_residential_complex .item_params_residential_complex {
+    width: calc(50% - 15px);
+    margin-bottom: 40px;
+  }
+  .params_residential_complex .item_params_residential_complex .text_item_params_residential_complex {
+    font-size: 30px;
+  }
+
+  .about_residential_complex {
+    padding-bottom: 70px;
+  }
+  .about_residential_complex .row_top_about_residential_complex {
+    flex-wrap: wrap;
+  }
+  .about_residential_complex .row_top_about_residential_complex .title_about_residential_complex {
+    width: 100%;
+    margin-right: 0;
+  }
+  .about_residential_complex .tabs_about_residential_complex {
+    margin-top: 20px;
+  }
+  .about_residential_complex .tabs_about_residential_complex__content {
+    padding-top: 46px;
+  }
+  .about_residential_complex .tabs_about_residential_complex__content.active {
+    display: block;
+  }
+  .about_residential_complex .video_box_residential_complex {
+    width: 100%;
+  }
+  .about_residential_complex .info_box_residential_complex {
+    width: 100%;
+    margin-top: 40px;
+    display: block;
+  }
+  .about_residential_complex .company__numbers__item {
+    margin-right: 0;
+    width: calc(50% - 10px);
+    margin-bottom: 0;
+  }
+  .about_residential_complex .info_box_residential_complex .text_residential_complex {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .catalog .title_filtr_catalog {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .catalog .filtr_catalog {
+    padding: 33px 25px 0;
+    flex-wrap: wrap;
+  }
+  .catalog .filtr_catalog .custom-select {
+    width: calc(50% - 15px);
+    margin-bottom: 30px;
+  }
+  .catalog .items_box_catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .catalog .item_box_catalog {
+    width: calc(50% - 15px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .catalog .item_box_catalog .info_item_box_catalog {
+    width: 100%;
+  }
+  .catalog .item_box_catalog .top_info_item_box_catalog {
+    display: block;
+  }
+  .catalog .item_box_catalog .title_top_info_item_box_catalog {
+    padding: 15px 0;
+  }
+  .catalog .item_box_catalog .bottom_info_item_box_catalog {
+    display: block;
+  }
+  .catalog .item_box_catalog .left_bottom_info_item_box_catalog {
+    width: 100%;
+  }
+  .catalog .item_box_catalog .adress_box, .catalog .item_box_catalog .company_box, .catalog .item_box_catalog .text_adress_box {
+    width: 100%;
+    max-width: 100%;
+  }
+  .catalog .item_box_catalog .text_adress_box {
+    margin-top: 5px;
+  }
+  .catalog .item_box_catalog .company_box {
+    margin-top: 20px;
+  }
+  .catalog .item_box_catalog .right_bottom_info_item_box_catalog {
+    width: 100%;
+    padding: 20px 0 0;
+    border: 0px solid white;
+  }
+
+  .about_company_residential_complex .wrap {
+    display: block;
+  }
+  .about_company_residential_complex .logo_box_about_company {
+    width: 100%;
+    margin-right: 0;
+  }
+  .about_company_residential_complex .info_about_company {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .about_company_residential_complex .number_items_info_about_company {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about_company_residential_complex .number_item_info_about_company {
+    margin-right: 30px;
+  }
+
+  .company_residential_complex .company__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+  .company_residential_complex .company__numbers__item {
+    width: calc(50% - 10px);
+    margin-bottom: 40px;
+  }
+  .company_residential_complex .company__numbers__item .small {
+    max-width: 90%;
+  }
+
+  .faq .title_faq {
+    width: 100%;
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .preview_residential_complex {
+    margin-top: -145px;
+  }
+  .preview_residential_complex .wrap {
+    padding-bottom: 100px;
+  }
+  .preview_residential_complex .title_h1 {
+    margin-bottom: 13px;
+    font-size: 32px;
+    line-height: 1.35;
+  }
+  .preview_residential_complex .full_price {
+    margin-top: 0;
+  }
+  .preview_residential_complex .btn_preview_residential_complex {
+    width: 100%;
+    height: 50px;
+  }
+  .preview_residential_complex .text_preview_residential_complex {
+    margin-top: 30px;
+  }
+
+  .params_residential_complex {
+    padding: 30px 0;
+  }
+  .params_residential_complex .item_params_residential_complex {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .params_residential_complex .item_params_residential_complex .text_item_params_residential_complex {
+    font-size: 24px;
+  }
+
+  .about_residential_complex .row_top_about_residential_complex .title_about_residential_complex {
+    font-size: 24px;
+    padding: 28px 0;
+    line-height: 1.35;
+    min-height: 10px;
+  }
+  .about_residential_complex .row_top_about_residential_complex .title_about_residential_complex:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 2000px;
+    background: #3C4AD2;
+  }
+  .about_residential_complex .row_top_about_residential_complex .tabs_about_residential_complex__nav li {
+    margin-right: 20px;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+  .about_residential_complex .video_box_residential_complex {
+    height: 200px;
+  }
+  .about_residential_complex .video_box_residential_complex span {
+    width: 70px;
+    height: 70px;
+  }
+  .about_residential_complex .company__numbers {
+    justify-content: space-between;
+  }
+  .about_residential_complex .company__numbers .big {
+    font-size: 58px;
+  }
+  .about_residential_complex .company__numbers .big span {
+    font-size: 13px;
+  }
+  .about_residential_complex .info_box_residential_complex .text_residential_complex {
+    margin-top: 25px;
+  }
+  .about_residential_complex .tabs_about_residential_complex {
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+  .about_residential_complex .tabs_about_residential_complex::-webkit-scrollbar {
+    display: none;
+  }
+
+  .catalog .title_catalog {
+    font-size: 38px;
+    line-height: 1.35;
+  }
+  .catalog .filtr_catalog .custom-select {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .catalog .item_box_catalog {
+    width: 100%;
+  }
+  .catalog .item_box_catalog .right_bottom_info_item_box_catalog {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    align-items: center;
+    text-align: center;
+  }
+  .catalog .pagination__select {
+    display: none;
+  }
+  .catalog .pagination__left {
+    display: none;
+  }
+  .catalog .pagination__arows {
+    margin: 0px auto;
+    justify-content: center;
+  }
+  .catalog .bottom_sort_catalog {
+    padding-top: 10px;
+  }
+
+  .gallery_residential_complex {
+    margin-top: 40px;
+  }
+
+  .about_company_residential_complex .icon_logo_box_about_company {
+    width: 60px;
+    height: 60px;
+  }
+  .about_company_residential_complex .logo_box_about_company {
+    padding: 35px 0;
+  }
+  .about_company_residential_complex .logo_box_about_company::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 2000px;
+    background: white;
+  }
+  .about_company_residential_complex .mini_title_text_logo_box_about_company {
+    margin-bottom: 0;
+  }
+  .about_company_residential_complex .title_text_logo_box_about_company {
+    font-size: 36px;
+  }
+  .about_company_residential_complex .number_items_info_about_company {
+    flex-wrap: wrap;
+  }
+  .about_company_residential_complex .number_item_info_about_company {
+    margin-bottom: 10px;
+  }
+  .about_company_residential_complex .number_info_about_company {
+    font-size: 75px;
+  }
+  .about_company_residential_complex .big_text_info_about_company {
+    margin-top: 35px;
+  }
+
+  .company_residential_complex .company__numbers {
+    padding-bottom: 20px;
+  }
+
+  .faq {
+    margin-top: 60px;
+  }
+  .faq .title_faq {
+    font-size: 24px;
+    padding: 40px 0;
+  }
+  .faq .faq__list {
+    margin-top: 50px;
+  }
+  .faq .faq__header {
+    flex-wrap: wrap;
+  }
+  .faq .title_faq__header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .faq .faq__row {
+    padding: 20px 20px 15px 20px;
+  }
+  .faq .faq__btn {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    margin: 0px auto;
+  }
+  .faq .faq__body {
+    padding-top: 25px;
+  }
+}
+/*# sourceMappingURL=residential-complex.css.map */

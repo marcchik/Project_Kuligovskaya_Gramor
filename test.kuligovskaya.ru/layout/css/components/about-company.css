@@ -1,0 +1,123 @@
+.about_company {
+  color: white;
+}
+.about_company .title_about_company {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+}
+.about_company .content_about_company {
+  width: 1030px;
+  margin: 60px auto 0;
+}
+.about_company .preview_about_company {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.about_company .preview_about_company img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about_company .preview_about_company:after {
+  content: "";
+  position: absolute;
+  top: 67px;
+  bottom: 83px;
+  left: 100%;
+  width: 2000px;
+  background: #3C4AD2;
+}
+.about_company .h2_title_about_company {
+  margin: 49px 0 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+.about_company .cursive_text_about_company {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin: 27px 0 0;
+}
+.about_company p {
+  margin: 25px 0 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.about_company .media_box_about_company {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+}
+.about_company .media_box_about_company {
+  height: 303px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about_company .company__media__video {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about_company .company__media__img {
+  width: calc(30% - 15px);
+  margin-right: 0;
+}
+.about_company .company__media a {
+  background-size: cover;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .about_company .content_about_company {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .about_company .preview_about_company {
+    height: 250px;
+  }
+  .about_company .title_about_company {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .about_company .content_about_company {
+    margin-top: 0;
+  }
+  .about_company .h2_title_about_company {
+    font-size: 24px;
+  }
+  .about_company .media_box_about_company {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: block;
+  }
+  .about_company .company__media__img {
+    display: block;
+  }
+  .about_company .company__media__video, .about_company .company__media__img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .about_company p {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=about-company.css.map */
