@@ -1,4 +1,3 @@
-</main>
 <footer class="footer">
     <div class="wrap">
         <div class="footer__search-mob">
@@ -321,9 +320,6 @@
     </div>
 </section>
 </div>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/libs/jquery.min.js"></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/vendor.js"></script>
-<script src="<?= SITE_TEMPLATE_PATH ?>/js/main.js"></script>
 </body>
 
 </html>

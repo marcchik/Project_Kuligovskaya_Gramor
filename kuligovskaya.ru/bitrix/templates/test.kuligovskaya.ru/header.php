@@ -6,13 +6,27 @@
     <link rel="shortcut icon" href="<?= SITE_TEMPLATE_PATH ?>/img/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#111111">
-    <title>New site</title>
-    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/vendor.css">
-    <link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/main.css">
-</head>
-<body>
-<div class="app">
+    <title><?=$APPLICATION->ShowTitle() ?></title>
+    <?$APPLICATION->ShowHead();?>
 
+    <?
+    // Подключения скриптов
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/libs/jquery.min.js" );
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/vendor.js" );
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/main.js" );
+
+    //Подключение css
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/vendor.css", true);
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/main.css", true);
+    ?>
+
+</head>
+
+<body>
+<div id="panel">
+    <?$APPLICATION->ShowPanel();?>
+</div>
+<div class="app">
     <header class="header" id="header">
         <div class="wrap">
             <div class="header__wrap">
@@ -22,32 +36,25 @@
                 <div class="header__des">
                     <div class="header__row">
                         <nav class="top-nav">
-                            <ul class="list-reset">
-                                <li>
-                                    <a href=""> О компании</a>
-                                </li>
-                                <li>
-                                    <a href="">Новости</a>
-                                </li>
-                                <li>
-                                    <a href="">Услуги</a>
-                                </li>
-                                <li>
-                                    <a href="">Команда</a>
-                                </li>
-                                <li>
-                                    <a href="">Вакансии</a>
-                                </li>
-                                <li>
-                                    <a href="">Отзывы</a>
-                                </li>
-                                <li>
-                                    <a href="">Контакты</a>
-                                </li>
-                                <li>
-                                    <a href="">Избранное</a>
-                                </li>
-                            </ul>
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:menu",
+                                "header_menu",
+                                array(
+                                    "ALLOW_MULTI_SELECT" => "N",
+                                    "CHILD_MENU_TYPE" => "left",
+                                    "DELAY" => "N",
+                                    "MAX_LEVEL" => "1",
+                                    "MENU_CACHE_GET_VARS" => array(
+                                    ),
+                                    "MENU_CACHE_TIME" => "3600",
+                                    "MENU_CACHE_TYPE" => "N",
+                                    "MENU_CACHE_USE_GROUPS" => "Y",
+                                    "ROOT_MENU_TYPE" => "top",
+                                    "USE_EXT" => "N",
+                                    "COMPONENT_TEMPLATE" => "header_menu"
+                                ),
+                                false
+                            );?>
                         </nav>
                     </div>
                     <div class="header__row">
@@ -208,64 +215,4 @@
         </div>
 
     </nav>
-    <main class="main" id="main">
-        <section class="mob-img-sec">
-            <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/main-mob.jpg">
-        </section>
-        <section class="main-slider">
-            <div class="main-slider__wrap">
-                <div class="swiper" id="main-slider-img">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item">
-                                <img class="swiper-lazy main-slider__img"
-                                     data-src="<?= SITE_TEMPLATE_PATH ?>/img/main/1.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item">
-                                <img class="swiper-lazy main-slider__img"
-                                     data-src="<?= SITE_TEMPLATE_PATH ?>/img/main/2.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item">
-                                <img class="swiper-lazy main-slider__img"
-                                     data-src="<?= SITE_TEMPLATE_PATH ?>/img/main/1.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item">
-                                <img class="swiper-lazy main-slider__img"
-                                     data-src="<?= SITE_TEMPLATE_PATH ?>/img/main/2.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="swiper" id="main-slider-img-sub">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item2">
-                                <img class="main-slider__img2" src="<?= SITE_TEMPLATE_PATH ?>/img/main/1.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item2">
-                                <img class="main-slider__img2" src="<?= SITE_TEMPLATE_PATH ?>/img/main/2.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item2">
-                                <img class="main-slider__img2" src="<?= SITE_TEMPLATE_PATH ?>/img/main/1.jpg">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="main-slider-img__item2">
-                                <img class="main-slider__img2" src="<?= SITE_TEMPLATE_PATH ?>/img/main/2.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
