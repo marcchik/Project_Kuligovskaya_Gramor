@@ -1,56 +1,61 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
-<? pr($arParams);?>
-<?if (!empty($arResult)):?>
-<ul class="list-reset">
-
 <?
-$previousLevel = 0;
-foreach($arResult as $arItem):?>
+$arResult = array
+(
+    '0' => array
+    (
+        'TEXT' => 'О компании',
+        'LINK' => '/about',
+        'SELECTED' => '1',
+    ),
+    '1' => array
+    (
+        'TEXT' => 'Новости',
+        'LINK' => '/news',
+        'SELECTED' => '1',
+    ),
+    '2' => array
+    (
+        'TEXT' => 'Услуги',
+        'LINK' => '/services',
+        'SELECTED' => '1',
+    ),
+    '3' => array
+    (
+        'TEXT' => 'Вакансии',
+        'LINK' => '/vacancy',
+        'SELECTED' => '1',
+    ),
+    '4' => array
+    (
+        'TEXT' => 'Отзывы',
+        'LINK' => '/reviews',
+        'SELECTED' => '1',
+    ),
+    '5' => array
+    (
+        'TEXT' => 'Контакты',
+        'LINK' => '/contacts',
+        'SELECTED' => '1',
+    ),
+    '6' => array
+    (
+        'TEXT' => 'Избранное',
+        'LINK' => '/favorites',
+        'SELECTED' => '1',
+    )
+)
 
-	<?if ($previousLevel && $arItem["DEPTH_LEVEL"] < $previousLevel):?>
-		<?=str_repeat("</ul></li>", ($previousLevel - $arItem["DEPTH_LEVEL"]));?>
-	<?endif?>
+?>
+<?if (!empty($arResult)):?>
+    <ul class="list-reset">
 
-	<?if ($arItem["IS_PARENT"]):?>
+        <? foreach($arResult as $arItem):?>
+            <li>
+                <a href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a>
+            </li>
+        <? endforeach; ?>
 
-		<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-			<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a>
-				<ul class="root-item">
-		<?else:?>
-			<li><a href="<?=$arItem["LINK"]?>" class="parent<?if ($arItem["SELECTED"]):?> item-selected<?endif?>"><?=$arItem["TEXT"]?></a>
-				<ul>
-		<?endif?>
-
-	<?else:?>
-
-		<?if ($arItem["PERMISSION"] > "D"):?>
-
-			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li><a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>"><?=$arItem["TEXT"]?></a></li>
-			<?else:?>
-				<li><a href="<?=$arItem["LINK"]?>" <?if ($arItem["SELECTED"]):?> class="item-selected"<?endif?>><?=$arItem["TEXT"]?></a></li>
-			<?endif?>
-
-		<?else:?>
-
-			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
-				<li><a href="" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
-			<?else:?>
-				<li><a href="" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>"><?=$arItem["TEXT"]?></a></li>
-			<?endif?>
-
-		<?endif?>
-
-	<?endif?>
-
-	<?$previousLevel = $arItem["DEPTH_LEVEL"];?>
-
-<?endforeach?>
-
-<?if ($previousLevel > 1)://close last item tags?>
-	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
-<?endif?>
-
-</ul>
-<?endif?>
+    </ul>
+<? endif; ?>
