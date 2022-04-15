@@ -437,7 +437,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	false
 ); ?>
 
-                        <a href="" class="btn btn_all_news_mobile">
+                        <a href="/news" class="btn btn_all_news_mobile">
                             Все новости
                         </a>
                     </div>
