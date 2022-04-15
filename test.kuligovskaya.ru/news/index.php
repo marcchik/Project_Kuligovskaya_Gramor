@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Новости");
 
 ?>
     <main class="main" id="main">
@@ -23,7 +24,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "newslist",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "/news/detail?ID=#ELEMENT_ID#",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",

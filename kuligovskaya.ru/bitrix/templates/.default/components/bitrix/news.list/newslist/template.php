@@ -9,16 +9,28 @@ $importantNews = false;
     <h1 class="h1">
         Список новостей
     </h1>
+
     <div class="custom-select">
         <select>
             <option></option>
-            <option selected>
+            <option selected="">
                 Сначала последние
             </option>
             <option>
                 Сначала старые
             </option>
         </select>
+        <div class="select-selected">
+            Сначала старые
+        </div>
+        <div class="select-items select-hide">
+            <div>
+                Сначала последние
+            </div>
+            <div class="same-as-selected">
+                Сначала старые
+            </div>
+        </div>
     </div>
 </div>
 
