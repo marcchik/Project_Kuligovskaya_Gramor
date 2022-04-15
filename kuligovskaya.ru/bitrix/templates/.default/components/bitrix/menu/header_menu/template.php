@@ -23,23 +23,29 @@ $arResult = array
     ),
     '3' => array
     (
+        'TEXT' => 'Команда',
+        'LINK' => '/team',
+        'SELECTED' => '1',
+    ),
+    '4' => array
+    (
         'TEXT' => 'Вакансии',
         'LINK' => '/vacancy',
         'SELECTED' => '1',
     ),
-    '4' => array
+    '5' => array
     (
         'TEXT' => 'Отзывы',
         'LINK' => '/reviews',
         'SELECTED' => '1',
     ),
-    '5' => array
+    '6' => array
     (
         'TEXT' => 'Контакты',
         'LINK' => '/contacts',
         'SELECTED' => '1',
     ),
-    '6' => array
+    '7' => array
     (
         'TEXT' => 'Избранное',
         'LINK' => '/favorites',
