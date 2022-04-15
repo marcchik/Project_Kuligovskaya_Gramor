@@ -24,7 +24,7 @@
 
 <body>
 <div id="panel">
-    <?//$APPLICATION->ShowPanel();?>
+    <?$APPLICATION->ShowPanel();?>
 </div>
 <div class="app">
     <header class="header" id="header">

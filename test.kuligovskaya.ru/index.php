@@ -74,7 +74,6 @@ $APPLICATION->SetTitle("Главная");
                 ),
                 false
             ); ?>
-
         </section>
 
 
