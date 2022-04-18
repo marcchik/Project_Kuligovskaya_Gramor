@@ -3,17 +3,16 @@ $this->setFrameMode(true);
 $count = 0
 ?>
 
-
 <div class="custom-swiper promo">
     <div class="swiper-wrapper">
         <? foreach($arResult["ITEMS"] as $arItem): ?>
             <?
-            if($arItem['PROPERTIES']['STAFF']['VALUE'] != $_REQUEST['ID']) continue;
-            $count++;
             $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
-            <div class="swiper-slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+            <? if($arItem['PROPERTIES']['STAFF']['VALUE'] == $_REQUEST['ID']) :?>
+            <?$count++;?>
+                <div class="swiper-slide" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
                 <div class="promo__item">
                     <div class="promo__item__img">
                         <!--проверка на существование картинки-->
@@ -78,6 +77,7 @@ $count = 0
                     </div>
                 </div>
             </div>
+            <? endif; ?>
         <? endforeach; ?>
     </div>
 
