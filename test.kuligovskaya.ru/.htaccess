@@ -1,0 +1,69 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^\/product-page.*$ [NC]
+RewriteRule ^(.*)$ http://www.kuligovskaya.ru/catalog/ [R=301,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^\/single-post.*$ [NC]
+RewriteRule ^(.*)$ http://www.kuligovskaya.ru/news/ [R=301,L]
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  php_value display_errors 1
+  php_value mbstring.internal_encoding UTF-8
+  php_value mbstring.func_overload 2
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+
+Redirect 301 /luxuryapartments http://www.kuligovskaya.ru/catalog/gorodskaya-nedvizhimost/
+Redirect 301 /luxuryhomes http://www.kuligovskaya.ru/catalog/zagorodnaya-nedvizhimost/
+Redirect 301 /luxurynewapartments http://www.kuligovskaya.ru/catalog/
+Redirect 301 /investicii http://www.kuligovskaya.ru/catalog/investitsii/
+Redirect 301 /blog http://www.kuligovskaya.ru/news/
+Redirect 301 /aboutus http://www.kuligovskaya.ru/about/
+
+
+Redirect 301 /cart http://www.kuligovskaya.ru
+Redirect 301 /novostroykideshevle http://www.kuligovskaya.ru/catalog/
+Redirect 301 /product-page/4-к-в-жк-кандинский http://www.kuligovskaya.ru/catalog/
+Redirect 301 /product-page/квартира-260-м2-в-клубном-доме-тихвинъ http://www.kuligovskaya.ru/catalog/
+Redirect 301 /product-page/коттедж-624-м2-в-кадниково http://www.kuligovskaya.ru/catalog/
+Redirect 301 /single-post/2017/10/06/Ипотека-до-100-млнрублей-на-недвижимость-в-Екатеринбурге http://www.kuligovskaya.ru/news/
+Redirect 301 /product-page/3-к-в-жк-кандинский http://www.kuligovskaya.ru/catalog/
+Redirect 301 /product-page/первый-этаж-в-тц-восточный-в-первой-линии http://www.kuligovskaya.ru/catalog/
+Redirect 301 /single-post/2017/11/15/Мода-на-элитные-коттеджные-поселки-обвалила-рынок-загородной-недвижимости-Екатеринбурга http://www.kuligovskaya.ru/news/
+Redirect 301 /product-page/1-к-в-жк-кандинский http://www.kuligovskaya.ru/catalog/
+Redirect 301 /product-page/4-к-квартира-на-красноармейской-74 http://www.kuligovskaya.ru/catalog/
+Redirect 301 /single-post/2016/09/05/Срочный-выкуп-офисов-и-тд-Как-быстро-продать-коммерческую-недвижимость http://www.kuligovskaya.ru/news/
+Redirect 301 /product-page/4-к-квартира-в-стиле-американской-классики http://www.kuligovskaya.ru/catalog/
+
+
+
+RewriteCond %{HTTP_HOST} ^kuligovskaya\.ru$ [NC]
+RewriteRule ^(.*)$ http://www.kuligovskaya.ru/$1 [R=301,L]

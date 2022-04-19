@@ -49,13 +49,11 @@ $arResult = array
 
 ?>
 <?if (!empty($arResult)):?>
-    <ul class="list-reset">
-
+    <ul class="mob-nav__main list-reset">
         <? foreach($arResult as $arItem):?>
             <li>
                 <a href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a>
             </li>
         <? endforeach; ?>
-
     </ul>
 <? endif; ?>

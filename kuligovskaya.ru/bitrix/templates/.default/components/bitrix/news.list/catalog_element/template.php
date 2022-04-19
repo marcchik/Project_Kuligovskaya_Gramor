@@ -16,7 +16,7 @@ $this->setFrameMode(true);
         <? endif; ?>
 
         <? if($count < 7):?>
-            <a href="" class="main-catalog__item lazyload" id="<?=$this->GetEditAreaId($arItem['ID']);?>"
+            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="main-catalog__item lazyload" id="<?=$this->GetEditAreaId($arItem['ID']);?>"
                data-src="<?=$arItem['DETAIL_PICTURE']['SRC']?>">
                 <div class="main-catalog__item__content">
                     <div class="main-catalog__item__title"><?=$arItem['NAME']?></div>
@@ -33,7 +33,7 @@ $this->setFrameMode(true);
             <div class="main-catalog__wrap main-catalog__wrap--more">
         <? endif; ?>
         <? if($count > 6):?>
-            <a href="" class="main-catalog__item lazyload" id="<?=$this->GetEditAreaId($arItem['ID']);?>"
+            <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="main-catalog__item lazyload" id="<?=$this->GetEditAreaId($arItem['ID']);?>"
                data-src="<?=$arItem['DETAIL_PICTURE']['SRC']?>">
                 <div class="main-catalog__item__content">
                     <div class="main-catalog__item__title"><?=$arItem['NAME']?></div>

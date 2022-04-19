@@ -31,7 +31,7 @@
         <div class="wrap">
             <div class="header__wrap">
                 <a href="/" class="logo">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/logo.svg">
+                    <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/logo.svg">
                 </a>
                 <div class="header__des">
                     <div class="header__row">
@@ -61,7 +61,7 @@
                         <div class="header__mid">
                             <a href="" class="header__location">
                                 <div class="header__location__img">
-                                    <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/location.png">
+                                    <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/location.png">
                                 </div>
                                 <div class="header__location__text">
                                     Екатеринбург, FC Limerance, оф.703
@@ -72,21 +72,21 @@
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#what"></use>
+                                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#what"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#tg"></use>
+                                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#tg"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                             <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
+                                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#phone"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -125,15 +125,15 @@
                 <div class="header__mob">
                     <a href="" class="header__mob__phone">
                         <svg width="14" height="14">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
+                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#phone"></use>
                         </svg>
                     </a>
                     <button type="button" class="burger btn-reset" id="burger">
                         <svg width="18" height="10" class="burger-open">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-open"></use>
+                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#burger-open"></use>
                         </svg>
                         <svg width="24" height="24" class="burger-close">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#burger-close"></use>
                         </svg>
                     </button>
                 </div>
@@ -143,29 +143,26 @@
 
     <nav class="mob-nav">
         <div class="wrap">
-            <ul class="mob-nav__main list-reset">
-                <li>
-                    <a href=""> О компании</a>
-                </li>
-                <li>
-                    <a href=""> Новости</a>
-                </li>
-                <li>
-                    <a href="">Услуги</a>
-                </li>
-                <li>
-                    <a href="">Команда</a>
-                </li>
-                <li>
-                    <a href="">Вакансии</a>
-                </li>
-                <li>
-                    <a href="">Отзывы</a>
-                </li>
-                <li>
-                    <a href="">Контакты</a>
-                </li>
-            </ul>
+            <?$APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "header_menu_mob",
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(
+                    ),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top",
+                    "USE_EXT" => "N",
+                    "COMPONENT_TEMPLATE" => "header_menu_mob"
+                ),
+                false
+            );?>
+
             <ul class="mob-nav__sub list-reset">
                 <li>
                     <a href="">Новостройки</a>
@@ -189,7 +186,7 @@
             <div class="mob-nav__bot">
                 <a href="" class="header__location">
                     <div class="header__location__img">
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/location.png">
+                        <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/location.png">
                     </div>
                     <div class="header__location__text">
                         Екатеринбург, FC Limerance, оф.703
@@ -199,14 +196,14 @@
                     <li>
                         <a href="">
                             <svg width="14" height="14">
-                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#what"></use>
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#what"></use>
                             </svg>
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <svg width="14" height="14">
-                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#tg"></use>
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#tg"></use>
                             </svg>
                         </a>
                     </li>

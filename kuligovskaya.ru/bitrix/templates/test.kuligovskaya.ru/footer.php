@@ -12,30 +12,25 @@
                     <div class="header__row">
                         <div class="footer__top__wrap">
                             <nav class="top-nav">
-                                <ul class="list-reset">
-                                    <li>
-                                        <a href=""> О компании</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Новости</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Услуги</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Команда</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Вакансии</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Отзывы</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Контакты</a>
-                                    </li>
-
-                                </ul>
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:menu",
+                                    "header_menu",
+                                    array(
+                                        "ALLOW_MULTI_SELECT" => "N",
+                                        "CHILD_MENU_TYPE" => "left",
+                                        "DELAY" => "N",
+                                        "MAX_LEVEL" => "1",
+                                        "MENU_CACHE_GET_VARS" => array(
+                                        ),
+                                        "MENU_CACHE_TIME" => "3600",
+                                        "MENU_CACHE_TYPE" => "N",
+                                        "MENU_CACHE_USE_GROUPS" => "Y",
+                                        "ROOT_MENU_TYPE" => "top",
+                                        "USE_EXT" => "N",
+                                        "COMPONENT_TEMPLATE" => "header_menu"
+                                    ),
+                                    false
+                                );?>
                             </nav>
                             <div class="footer__search">
                                 <input type="text" class="input" placeholder="Поиск">
