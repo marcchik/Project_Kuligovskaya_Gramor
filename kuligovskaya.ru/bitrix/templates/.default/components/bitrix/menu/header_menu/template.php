@@ -44,7 +44,13 @@ $arResult = array
         'TEXT' => 'Контакты',
         'LINK' => '/contacts',
         'SELECTED' => '1',
-    )
+    ),
+//    '7' => array
+//    (
+//        'TEXT' => 'Избранное',
+//        'LINK' => '/favorites',
+//        'SELECTED' => '1',
+//    )
 )
 
 ?>

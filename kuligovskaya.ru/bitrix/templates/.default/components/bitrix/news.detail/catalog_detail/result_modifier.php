@@ -32,5 +32,10 @@ $arResult['PROPERTIES']['PRICE_METR']['VALUE'] = $priceMetr;
 // пробелы в цене
 $arResult['PROPERTIES']['PRICE']['VALUE'] = strrev(chunk_split(strrev($arResult['PROPERTIES']['PRICE']['VALUE']), 3, ' '));
 
-
+// ссылки на фото
+foreach ($arResult['PROPERTIES']['PICTURES']['VALUE'] as $number => $photoID) {
+    $arImage = CFile::GetFileArray($photoID);
+    $photoID = $arImage['SRC'];
+    $arResult['PROPERTIES']['PICTURES']['VALUE'][$number] = $arImage['SRC'];
+}
 

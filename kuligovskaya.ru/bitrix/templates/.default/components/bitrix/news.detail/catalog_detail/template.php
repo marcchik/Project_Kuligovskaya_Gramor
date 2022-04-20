@@ -20,11 +20,8 @@ $this->setFrameMode(true);
                 <div class="swiper swiper_irp">
                     <div class="swiper-wrapper">
                         <? foreach ($arResult['PROPERTIES']['PICTURES']['VALUE'] as $photo) : ?>
-
-                            <? $arImage = CFile::GetFileArray($photo); ?>
-                            <? //pr($arImage);?>
                             <div class="swiper-slide">
-                                <img src="<?= $arImage["SRC"] ?>" alt="123">
+                                <img src="<?= $photo?>" alt="123">
                                 <div class="text_in_photo_swiper_irp">Описание фото</div>
                             </div>
                         <? endforeach; ?>

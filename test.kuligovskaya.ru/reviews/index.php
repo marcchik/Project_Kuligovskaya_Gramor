@@ -1,39 +1,278 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("О компании");
+$APPLICATION->SetTitle("Отзывы");
 
 ?>
     <main class="main" id="main">
         <div class="inner-page">
-            <section class="about_company">
+            <section class="reviews">
                 <div class="wrap">
-                    <div class="title_about_company">О компании</div>
-                    <div class="content_about_company">
-                        <div class="preview_about_company">
-                            <img src="https://test.kuligovskaya.ru/bitrix/templates/test.kuligovskaya.ru/img/main/unsplash_m-jJ4wLjoIc.png" alt="">
+                    <h1 class="h1">
+                        Отзывы
+                    </h1>
+                    <div class="review__top">
+                        Оценка
+                        <div class="review__top__row">
+                            4.3
+                            <div class="stars">
+                                <svg width="22" height="22">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                </svg>
+                                <svg width="22" height="22">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                </svg>
+                                <svg width="22" height="22">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                </svg>
+                                <svg width="22" height="22">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                </svg>
+                                <svg width="22" height="22">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                </svg>
+                            </div>
                         </div>
-                        <h2 class="h2_title_about_company">История герба Кулиговских</h2>
-                        <div class="cursive_text_about_company">«Три ноги – в броне, соединенные между собой в центре щита.<br>Ноги расположены в виде треугольника. Сверху – железный шлем».</div>
-                        <p>
-                            Именно такое замысловатое описание имеет родовой герб семьи Кулиговских. Древний род берет свое начало в далеком XI веке. Представители фамилии всегда пользовались почетом и уважением у знати того времени. Право владеть гербом было пожаловано князем Болеславом Кривоустом. Дворянский герб носит название «Драгомир». Подлинная история его возникновения неизвестна. А изображенные на гербе символы расшифровываются историками по-разному. Современные толкования связывают центральное изображение – три ноги в броне, с мобильностью и устойчивостью представителей рода. В смутные средневековые времена Кулиговские могли найти выход из трудных ситуаций. Для укрепления своего материального положения и статуса они использовали торговлю недвижимостью. И сумели достичь в этом деле больших успехов.
-                        </p>
-                        <div class="media_box_about_company">
-                            <a href="./img/main/company1.jpg" class="lazyload company__media__img" data-fslightbox="gallery" data-src="https://test.kuligovskaya.ru/bitrix/templates/test.kuligovskaya.ru/img/main/company1.jpg"></a>
-                            <a href="./video/1.mp4" data-fslightbox="gallery2" data-video-poster="https://fslightbox.com/img/bbunny.png" class="company__media__video" style="background-image: url(https://test.kuligovskaya.ru/bitrix/templates/test.kuligovskaya.ru/img/main/company2.jpg)">
-                                    <span>
-                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M5 3L19 12L5 21V3Z" fill="white"/>
-                                    </svg>
-
-                                    </span>
+                    </div>
+                    <div class="reviews__list">
+                        <div class="reviews__list__flex">
+                            <div class="reviews__item">
+                                <div class="reviews__item__img">
+                                    <div class="big lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/1.jpg"></div>
+                                    <div class="img lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/2.jpg"></div>
+                                </div>
+                                <div class="reviews__item__content">
+                                    <div class="reviews__item__top">
+                                        <div class="revieww__item__name">
+                                            Андрей Птушкин
+                                        </div>
+                                        <div class="revieww__item__data">12.08</div>
+                                    </div>
+                                    <div class="stars">
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__item__des">
+                                        <div class="reviews__item__des__text">
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                        </div>
+                                        <button class="btn-reset link reviews__more reviews__show-more">
+                                            Показать все
+                                        </button>
+                                        <button class="btn-reset link reviews__more reviews__hide-more">
+                                            скрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <div class="reviews__item__img">
+                                    <div class="big lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/1.jpg"></div>
+                                    <div class="img lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/2.jpg"></div>
+                                </div>
+                                <div class="reviews__item__content">
+                                    <div class="reviews__item__top">
+                                        <div class="revieww__item__name">
+                                            Андрей Птушкин
+                                        </div>
+                                        <div class="revieww__item__data">12.08</div>
+                                    </div>
+                                    <div class="stars">
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__item__des">
+                                        <div class="reviews__item__des__text">
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                        </div>
+                                        <button class="btn-reset link reviews__more reviews__show-more">
+                                            Показать все
+                                        </button>
+                                        <button class="btn-reset link reviews__more reviews__hide-more">
+                                            скрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <div class="reviews__item__img">
+                                    <div class="big lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/1.jpg"></div>
+                                    <div class="img lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/2.jpg"></div>
+                                </div>
+                                <div class="reviews__item__content">
+                                    <div class="reviews__item__top">
+                                        <div class="revieww__item__name">
+                                            Андрей Птушкин
+                                        </div>
+                                        <div class="revieww__item__data">12.08</div>
+                                    </div>
+                                    <div class="stars">
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__item__des">
+                                        <div class="reviews__item__des__text">
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                        </div>
+                                        <button class="btn-reset link reviews__more reviews__show-more">
+                                            Показать все
+                                        </button>
+                                        <button class="btn-reset link reviews__more reviews__hide-more">
+                                            скрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <div class="reviews__item__img">
+                                    <div class="big lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/1.jpg"></div>
+                                    <div class="img lazyload" data-src="/bitrix/templates/test.kuligovskaya.ru/img/reviews/2.jpg"></div>
+                                </div>
+                                <div class="reviews__item__content">
+                                    <div class="reviews__item__top">
+                                        <div class="revieww__item__name">
+                                            Андрей Птушкин
+                                        </div>
+                                        <div class="revieww__item__data">12.08</div>
+                                    </div>
+                                    <div class="stars">
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                        <svg width="14" height="14">
+                                            <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="reviews__item__des">
+                                        <div class="reviews__item__des__text">
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                            Предварительные выводы неутешительны: выбранный нами инновационный путь обеспечивает широкому кругу (специалистов) участие в формировании соответствующих условий активизации! Активно развивающи
+                                        </div>
+                                        <button class="btn-reset link reviews__more reviews__show-more">
+                                            Показать все
+                                        </button>
+                                        <button class="btn-reset link reviews__more reviews__hide-more">
+                                            скрыть
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <div class="pagination__left">
+                            <a href="javascript:" class="active">1</a>
+                            <a href="" class="">2</a>
+                            <a href="" class="">3</a>
+                            <a href="" class="">4</a>
+                            <a href="" class="">5</a>
+                            <a href="" class="">6</a>
+                            <a href="" class="">7</a>
+                            <a href="" class="">8</a>
+                        </div>
+                        <div class="pagination__select">
+                            <div class="custom-select">
+                                <select>
+                                    <option></option>
+                                    <option selected>Показывать по 10</option>
+                                    <option>Показывать по 20</option>
+                                    <option>Показывать по 50</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="pagination__arows">
+                            <a href="">
+                                <svg width="7.5" height="15">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#arr-left"></use>
+                                </svg>
                             </a>
-                            <a href="./img/main/company1.jpg" class="lazyload company__media__img" data-fslightbox="gallery" data-src="https://test.kuligovskaya.ru/bitrix/templates/test.kuligovskaya.ru/img/main/company1.jpg"></a>
+                            <a href="">
+                                <svg width="7.5" height="15">
+                                    <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#arr-right"></use>
+                                </svg>
+                            </a>
                         </div>
-                        <h2 class="h2_title_about_company">От средневековья до наших дней</h2>
-                        <p>
-                            Архивные источники сообщают, что Кулиговкие произошли от Ивана Кулиговского, который занимал почетную должность судьи в Визской Земле. Предок славился множеством положительных качеств и честно выполнял возложенные на него Законом обязанности. Кулиговский также отличался предприимчивостью в проведении частных сделок с недвижимостью. В 1685 году он удачно продал свою деревню Дроздово. Впоследствии представители рода переселились на более плодородные и выгодные с точки зрения ведения дел земли. Они обосновались, согласно истории, «в деревне Кулиги-Липки, в прежнем Гонифндском Повете лежавшей». Не забывая заслуг Ивана, Кулиговские продолжали выгодно использовать свои умения продавать недвижимость, которой у них, к счастью, было достаточно. То и дело, заключая прибыльные сделки, представители рода Кулиговских нашли в этом свое призвание. И впоследствии стали выступать посредниками между желающими продать или купить деревню, дом, завод, конюшню и т.п. Известность была приобретена во многом благодаря гербу «Драгомир». Он стал хорошо узнаваемой эмблемой, которая и сегодня является символом успешных сделок с недвижимостью.
-                        </p>
+                    </div>
+                    <div class="reviews_form">
+                        <form action="">
+                            <h2>Оставить отзыв</h2>
+                            <div class="textarea_box">
+                                <textarea name="" id="" class="textarea_reviews_form" placeholder="Текст отзыва....."></textarea>
+                                <div class="count_words">01/2054</div>
+                            </div>
+                            <div class="btn_rating_box_reviews_form">
+                                <div class="btn_reviews_form" onclick="OpenModal('sank_review')">Оставить отзыв</div>
+                                <div class="rating_box_reviews_form">
+                                    <div class="title_rating_reviews_form">Ваш рейтинг:</div>
+                                    <div class="check_list_reviews_form">
+                                        <input name="rating" value="5" id="rating_5" type="radio" />
+                                        <label for="rating_5" class="label_rating"></label>
+
+                                        <input name="rating" value="4" id="rating_4" type="radio" />
+                                        <label for="rating_4" class="label_rating"></label>
+
+                                        <input name="rating" value="3" id="rating_3" type="radio" />
+                                        <label for="rating_3" class="label_rating"></label>
+
+                                        <input name="rating" value="2" id="rating_2" type="radio" />
+                                        <label for="rating_2" class="label_rating"></label>
+
+                                        <input name="rating" value="1" id="rating_1" type="radio" />
+                                        <label for="rating_1" class="label_rating"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>

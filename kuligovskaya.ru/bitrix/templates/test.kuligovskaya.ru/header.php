@@ -101,22 +101,22 @@
                         <nav class="bot-nav">
                             <ul class="list-reset">
                                 <li>
-                                    <a href="">Новостройки</a>
+                                    <a href="/agregator">Новостройки</a>
                                 </li>
                                 <li>
-                                    <a href="">Городская недвижимость</a>
+                                    <a href="/catalog?ID=16">Городская недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="">Загородная недвижимость</a>
+                                    <a href="/catalog?ID=17">Загородная недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="">Коммерческая недвижимость</a>
+                                    <a href="/catalog?ID=18">Коммерческая недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="">Москва</a>
+                                    <a href="/catalog?ID=119">Москва</a>
                                 </li>
                                 <li>
-                                    <a href="">Зарубежная</a>
+                                    <a href="#">Зарубежная</a>
                                 </li>
                             </ul>
                         </nav>
@@ -165,22 +165,22 @@
 
             <ul class="mob-nav__sub list-reset">
                 <li>
-                    <a href="">Новостройки</a>
+                    <a href="/agregator">Новостройки</a>
                 </li>
                 <li>
-                    <a href="">Городская недвижимость</a>
+                    <a href="/catalog?ID=16">Городская недвижимость</a>
                 </li>
                 <li>
-                    <a href="">Загородная недвижимость</a>
+                    <a href="/catalog?ID=17">Загородная недвижимость</a>
                 </li>
                 <li>
-                    <a href="">Коммерческая недвижимость</a>
+                    <a href="/catalog?ID=18">Коммерческая недвижимость</a>
                 </li>
                 <li>
-                    <a href="">Москва</a>
+                    <a href="/catalog?ID=119">Москва</a>
                 </li>
                 <li>
-                    <a href="">Зарубежная</a>
+                    <a href="#">Зарубежная</a>
                 </li>
             </ul>
             <div class="mob-nav__bot">
