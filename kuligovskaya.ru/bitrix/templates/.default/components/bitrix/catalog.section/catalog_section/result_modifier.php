@@ -7,3 +7,4 @@
 
 $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
+

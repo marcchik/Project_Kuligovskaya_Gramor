@@ -11,7 +11,7 @@ $count = 0;
     <div class="wrap">
         <div class="title_text_catalog">
             <div class="title_catalog">
-                Городская недвижимость
+                <?=$arResult['CUR_SECTION_NAME']?>
             </div>
             <div class="text_catalog">
                 Каждый из нас понимает очевидную вещь: консультация с широким активом играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных

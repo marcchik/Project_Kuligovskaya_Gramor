@@ -104,16 +104,16 @@
                                     <a href="/agregator">Новостройки</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?ID=16">Городская недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=16">Городская недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?ID=17">Загородная недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=17">Загородная недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?ID=18">Коммерческая недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=18">Коммерческая недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?ID=119">Москва</a>
+                                    <a href="/catalog?SECTION_ID=119">Москва</a>
                                 </li>
                                 <li>
                                     <a href="#">Зарубежная</a>
@@ -168,16 +168,16 @@
                     <a href="/agregator">Новостройки</a>
                 </li>
                 <li>
-                    <a href="/catalog?ID=16">Городская недвижимость</a>
+                    <a href="/catalog?SECTION_ID=16">Городская недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?ID=17">Загородная недвижимость</a>
+                    <a href="/catalog?SECTION_ID=17">Загородная недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?ID=18">Коммерческая недвижимость</a>
+                    <a href="/catalog?SECTION_ID=18">Коммерческая недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?ID=119">Москва</a>
+                    <a href="/catalog?SECTION_ID=119">Москва</a>
                 </li>
                 <li>
                     <a href="#">Зарубежная</a>
