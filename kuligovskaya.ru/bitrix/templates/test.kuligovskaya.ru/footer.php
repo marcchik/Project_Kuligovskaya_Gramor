@@ -44,36 +44,94 @@
                                     <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/location.png">
                                 </div>
                                 <div class="header__location__text">
-                                    Екатеринбург, FC Limerance, оф.703
+                                    <? $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        array(
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => "/bitrix/templates/test.kuligovskaya.ru/include/location.php",
+                                            "EDIT_TEMPLATE" => ""
+                                        ),
+                                        false
+                                    ); ?>
                                 </div>
                             </a>
                             <div class="header__mid__right">
-                                <ul class="header__soc list-reset">
-                                    <li>
-                                        <a href="">
-                                            <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#what"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#tg"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <svg width="14" height="14">
-                                                <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a href="tel:+73433009340" class="header__phone">
-                                    <span>+7 (343)</span> 300-93-40
-                                </a>
+                                <? $APPLICATION->IncludeComponent("bitrix:news.list", "social_networks", Array(
+                                    "ACTIVE_DATE_FORMAT" => "d.m.Y",	// Формат показа даты
+                                    "ADD_SECTIONS_CHAIN" => "Y",	// Включать раздел в цепочку навигации
+                                    "AJAX_MODE" => "N",	// Включить режим AJAX
+                                    "AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+                                    "AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+                                    "AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+                                    "AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+                                    "CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+                                    "CACHE_GROUPS" => "Y",	// Учитывать права доступа
+                                    "CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+                                    "CACHE_TYPE" => "A",	// Тип кеширования
+                                    "CHECK_DATES" => "Y",	// Показывать только активные на данный момент элементы
+                                    "COMPONENT_TEMPLATE" => "social_networks",
+                                    "DETAIL_URL" => "/news/detail?ID=#ELEMENT_ID#",	// URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                                    "DISPLAY_BOTTOM_PAGER" => "Y",	// Выводить под списком
+                                    "DISPLAY_DATE" => "Y",	// Выводить дату элемента
+                                    "DISPLAY_NAME" => "Y",	// Выводить название элемента
+                                    "DISPLAY_PICTURE" => "Y",	// Выводить изображение для анонса
+                                    "DISPLAY_PREVIEW_TEXT" => "Y",	// Выводить текст анонса
+                                    "DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+                                    "FIELD_CODE" => array(	// Поля
+                                        0 => "DETAIL_PICTURE",
+                                        1 => "",
+                                    ),
+                                    "FILTER_NAME" => "",	// Фильтр
+                                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",	// Скрывать ссылку, если нет детального описания
+                                    "IBLOCK_ID" => "48",	// Код информационного блока
+                                    "IBLOCK_TYPE" => "smscity_realty_content",	// Тип информационного блока (используется только для проверки)
+                                    "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",	// Включать инфоблок в цепочку навигации
+                                    "INCLUDE_SUBSECTIONS" => "Y",	// Показывать элементы подразделов раздела
+                                    "MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+                                    "NEWS_COUNT" => "20",	// Количество новостей на странице
+                                    "PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+                                    "PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+                                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+                                    "PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+                                    "PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+                                    "PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+                                    "PAGER_TITLE" => "Новости",	// Название категорий
+                                    "PARENT_SECTION" => "",	// ID раздела
+                                    "PARENT_SECTION_CODE" => "",	// Код раздела
+                                    "PREVIEW_TRUNCATE_LEN" => "",	// Максимальная длина анонса для вывода (только для типа текст)
+                                    "PROPERTY_CODE" => array(	// Свойства
+                                        0 => "",
+                                        1 => "SMALL_HEADER",
+                                        2 => "",
+                                    ),
+                                    "SET_BROWSER_TITLE" => "Y",	// Устанавливать заголовок окна браузера
+                                    "SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+                                    "SET_META_DESCRIPTION" => "Y",	// Устанавливать описание страницы
+                                    "SET_META_KEYWORDS" => "Y",	// Устанавливать ключевые слова страницы
+                                    "SET_STATUS_404" => "N",	// Устанавливать статус 404
+                                    "SET_TITLE" => "N",	// Устанавливать заголовок страницы
+                                    "SHOW_404" => "N",	// Показ специальной страницы
+                                    "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
+                                    "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
+                                    "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+                                    "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
+                                    "STRICT_SECTION_CHECK" => "N",	// Строгая проверка раздела для показа списка
+                                ),
+                                    false
+                                ); ?>
+                                <? $APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    array(
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => "/bitrix/templates/test.kuligovskaya.ru/include/phone.php",
+                                        "EDIT_TEMPLATE" => ""
+                                    ),
+                                    false
+                                ); ?>
                             </div>
                         </div>
                     </div>
@@ -97,7 +155,17 @@
         </div>
         <div class="footer__bot">
             <div class="footer__bot__item">
-                © ООО «Кулиговская и Партнёры», 2016
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:main.include",
+                    ".default",
+                    array(
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "AREA_FILE_SHOW" => "file",
+                        "PATH" => "/bitrix/templates/test.kuligovskaya.ru/include/name_company.php",
+                        "EDIT_TEMPLATE" => ""
+                    ),
+                    false
+                ); ?>
             </div>
             <div class="footer__bot__item">
                 Все права защищены

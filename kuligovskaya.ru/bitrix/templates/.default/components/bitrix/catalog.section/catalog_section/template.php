@@ -378,7 +378,7 @@ $containerName = 'container-'.$navParams['NavNum'];
                             <div class="right_bottom_info_item_box_catalog">
                                 <div class="price_box_right_bottom_info_catalog">
                                     <div class="mini_title_price_box_right_bottom_info_catalog">Цена:</div>
-                                    <div class="full_price_price_box_right_bottom_info_catalog"><?=$arItem['PROPERTIES']['PRICE']['VALUE']?> Р</div>
+                                    <div class="full_price_price_box_right_bottom_info_catalog"><?=strrev(chunk_split(strrev($arItem['PROPERTIES']['PRICE']['VALUE']), 3, ' '))?> Р</div>
                                 </div>
                                 <div class="btn_price_box_right_bottom_info_catalog" onclick="OpenModal('ask_viewing')">Оставить заявку</div>
                                 <div class="mini_btn_ipoteka_bottom_info_catalog" onclick="OpenModal('info_modal')">Ипотека</div>
