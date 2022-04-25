@@ -369,7 +369,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                             <h1 class="h1">
                                 Другие новости
                             </h1>
-                            <a href="" class="btn btn_all_news_desk">
+                            <a href="/news" class="btn btn_all_news_desk">
                                 Все новости
                             </a>
                         </div>

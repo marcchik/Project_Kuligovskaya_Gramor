@@ -25,7 +25,7 @@
                                         "MENU_CACHE_TIME" => "3600",
                                         "MENU_CACHE_TYPE" => "N",
                                         "MENU_CACHE_USE_GROUPS" => "Y",
-                                        "ROOT_MENU_TYPE" => "top",
+                                        "ROOT_MENU_TYPE" => "left",
                                         "USE_EXT" => "N",
                                         "COMPONENT_TEMPLATE" => "header_menu"
                                     ),
@@ -365,23 +365,7 @@
         </form>
     </div>
 </section>
-<section class="modal_form" id="sank_review">
-    <div class="modal_form__wrap">
-        <form class="content_modal_form">
-            <div class="box_close_btn_modal_form">
-                <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('sank_review')">
-                    <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
-                    </svg>
-                </button>
-            </div>
-            <div class="title_modal_form">Спасибо за оставленный отзыв!</div>
-            <div class="mini_text_modal_form">Большое спасибо, за оставленный вами отзыв.</div>
 
-            <div class="btn_close_form" onclick="CloseModal('sank_review')">Закрыть</div>
-        </form>
-    </div>
-</section>
 </div>
 </body>
 

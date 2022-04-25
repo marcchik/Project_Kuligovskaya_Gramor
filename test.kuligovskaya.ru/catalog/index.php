@@ -5,169 +5,329 @@ $APPLICATION->SetTitle("Каталог");
 ?>
     <main class="main" id="main">
     <div class="inner-page">
-<!--        --><?// $APPLICATION->IncludeComponent(
-//            "bitrix:news.list",
-//            "catalog",
-//            array(
-//                "ACTIVE_DATE_FORMAT" => "d.m.Y",
-//                "ADD_SECTIONS_CHAIN" => "Y",
-//                "AJAX_MODE" => "N",
-//                "AJAX_OPTION_ADDITIONAL" => "",
-//                "AJAX_OPTION_HISTORY" => "N",
-//                "AJAX_OPTION_JUMP" => "N",
-//                "AJAX_OPTION_STYLE" => "Y",
-//                "CACHE_FILTER" => "Y",
-//                "CACHE_GROUPS" => "Y",
-//                "CACHE_TIME" => "36000000",
-//                "CACHE_TYPE" => "A",
-//                "CHECK_DATES" => "Y",
-//                "COMPONENT_TEMPLATE" => "catalog",
-//                "DETAIL_URL" => "/catalog/detail?ID=#ELEMENT_ID#",
-//                "DISPLAY_BOTTOM_PAGER" => "Y",
-//                "DISPLAY_DATE" => "Y",
-//                "DISPLAY_NAME" => "Y",
-//                "DISPLAY_PICTURE" => "Y",
-//                "DISPLAY_PREVIEW_TEXT" => "Y",
-//                "DISPLAY_TOP_PAGER" => "N",
-//                "FIELD_CODE" => array(
-//                    0 => "DETAIL_PICTURE",
-//                    1 => "",
-//                ),
-//                "FILTER_NAME" => "",
-//                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-//                "IBLOCK_ID" => "10",
-//                "IBLOCK_TYPE" => "smscity_realty_content",
-//                "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-//                "INCLUDE_SUBSECTIONS" => "Y",
-//                "MESSAGE_404" => "",
-//                "NEWS_COUNT" => "20",
-//                "PAGER_BASE_LINK_ENABLE" => "N",
-//                "PAGER_DESC_NUMBERING" => "N",
-//                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-//                "PAGER_SHOW_ALL" => "N",
-//                "PAGER_SHOW_ALWAYS" => "N",
-//                "PAGER_TEMPLATE" => ".default",
-//                "PAGER_TITLE" => "Новости",
-//                "PARENT_SECTION" => "",
-//                "PARENT_SECTION_CODE" => "",
-//                "PREVIEW_TRUNCATE_LEN" => "",
-//                "PROPERTY_CODE" => array(
-//                    0 => "",
-//                    1 => "SMALL_HEADER",
-//                    2 => "",
-//                ),
-//                "SET_BROWSER_TITLE" => "Y",
-//                "SET_LAST_MODIFIED" => "N",
-//                "SET_META_DESCRIPTION" => "Y",
-//                "SET_META_KEYWORDS" => "Y",
-//                "SET_STATUS_404" => "N",
-//                "SET_TITLE" => "N",
-//                "SHOW_404" => "N",
-//                "SORT_BY1" => "ACTIVE_FROM",
-//                "SORT_BY2" => "SORT",
-//                "SORT_ORDER1" => "DESC",
-//                "SORT_ORDER2" => "ASC",
-//                "STRICT_SECTION_CHECK" => "N"
-//            ),
-//            false
-//        ); ?>
+        <section class="catalog">
+            <div class="wrap">
+                <div class="title_text_catalog">
+                    <div class="title_catalog">
+                        <?=$arResult['NAME']?>
+                    </div>
+                    <div class="text_catalog">
+                        Каждый из нас понимает очевидную вещь: консультация с широким активом играет определяющее значение для как самодостаточных, так и внешне зависимых концептуальных
+                    </div>
+                </div>
+                <div class="filtr_catalog">
+                    <div class="title_filtr_catalog">Фильтр:</div>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:catalog.smart.filter",
+                        "",
+                        Array(
+                            "CACHE_GROUPS" => "Y",
+                            "CACHE_TIME" => "36000000",
+                            "CACHE_TYPE" => "A",
+                            "DISPLAY_ELEMENT_COUNT" => "Y",
+                            "FILTER_NAME" => "arrFilter",
+                            "FILTER_VIEW_MODE" => "vertical",
+                            "IBLOCK_ID" => "10",
+                            "IBLOCK_TYPE" => "smscity_realty_catalog",
+                            "PAGER_PARAMS_NAME" => "arrPager",
+                            "POPUP_POSITION" => "left",
+                            "SAVE_IN_SESSION" => "N",
+                            "SECTION_CODE" => "",
+                            "SECTION_DESCRIPTION" => "-",
+                            "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                            "SECTION_TITLE" => "-",
+                            "SEF_MODE" => "N",
+                            "TEMPLATE_THEME" => "blue",
+                            "XML_EXPORT" => "N"
+                        )
+                    );?>
+                    <div class="custom-select">
+                        <select>
+                            <option></option>
+                            <option selected="" disabled="">
+                                Район
+                            </option>
+                            <option>
+                                Район 1
+                            </option>
+                            <option>
+                                Район 2
+                            </option>
+                        </select>
+                        <div class="select-selected">
+                            Район
+                        </div><div class="select-items select-hide"><div>
+                                Район
+                            </div><div>
+                                Район 1
+                            </div><div>
+                                Район 2
+                            </div></div></div>
+                    <div class="custom-select">
+                        <select>
+                            <option></option>
+                            <option selected="" disabled="">
+                                Застройщик
+                            </option>
+                            <option>
+                                Застройщик 1
+                            </option>
+                            <option>
+                                Застройщик 2
+                            </option>
+                        </select>
+                        <div class="select-selected">
+                            Застройщик
+                        </div><div class="select-items select-hide"><div>
+                                Застройщик
+                            </div><div>
+                                Застройщик 1
+                            </div><div>
+                                Застройщик 2
+                            </div></div></div>
+                    <div class="custom-select">
+                        <select>
+                            <option></option>
+                            <option selected="" disabled="">
+                                Площадь(м2)
+                            </option>
+                            <option>
+                                50 - 60
+                            </option>
+                            <option>
+                                60 - 70
+                            </option>
+                        </select>
+                        <div class="select-selected">
+                            Площадь(м2)
+                        </div><div class="select-items select-hide"><div>
+                                Площадь(м2)
+                            </div><div>
+                                50 - 60
+                            </div><div>
+                                60 - 70
+                            </div></div></div>
+                    <div class="custom-select">
+                        <select>
+                            <option></option>
+                            <option selected="" disabled="">
+                                Комнат
+                            </option>
+                            <option>
+                                1 ком.
+                            </option>
+                            <option>
+                                2 ком.
+                            </option>
+                            <option>
+                                3 ком.
+                            </option>
+                        </select>
+                        <div class="select-selected">
+                            Комнат
+                        </div><div class="select-items select-hide"><div>
+                                Комнат
+                            </div><div>
+                                1 ком.
+                            </div><div>
+                                2 ком.
+                            </div><div>
+                                3 ком.
+                            </div></div></div>
+                    <div class="custom-select">
+                        <select>
+                            <option></option>
+                            <option selected="" disabled="">
+                                Цена
+                            </option>
+                            <option>
+                                1 млн - 3 млн
+                            </option>
+                            <option>
+                                3 млн - 5 млн
+                            </option>
+                            <option>
+                                5 млн - 15 млн
+                            </option>
+                        </select>
+                        <div class="select-selected">
+                            Цена
+                        </div><div class="select-items select-hide"><div>
+                                Цена
+                            </div><div>
+                                1 млн - 3 млн
+                            </div><div>
+                                3 млн - 5 млн
+                            </div><div>
+                                5 млн - 15 млн
+                            </div></div></div>
+                </div>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:catalog.section",
+                    "catalog_section",
+                    array(
+                        "ACTION_VARIABLE" => "action",
+                        "ADD_PICT_PROP" => "-",
+                        "ADD_PROPERTIES_TO_BASKET" => "Y",
+                        "ADD_SECTIONS_CHAIN" => "N",
+                        "AJAX_MODE" => "N",
+                        "AJAX_OPTION_ADDITIONAL" => "",
+                        "AJAX_OPTION_HISTORY" => "N",
+                        "AJAX_OPTION_JUMP" => "N",
+                        "AJAX_OPTION_STYLE" => "Y",
+                        "BACKGROUND_IMAGE" => "-",
+                        "BASKET_URL" => "/personal/basket.php",
+                        "BROWSER_TITLE" => "-",
+                        "CACHE_FILTER" => "N",
+                        "CACHE_GROUPS" => "Y",
+                        "CACHE_TIME" => "36000000",
+                        "CACHE_TYPE" => "A",
+                        "COMPATIBLE_MODE" => "Y",
+                        "DETAIL_URL" => "/catalog/detail?ID=#ELEMENT_ID#",
+                        "DISABLE_INIT_JS_IN_COMPONENT" => "N",
+                        "DISPLAY_BOTTOM_PAGER" => "Y",
+                        "DISPLAY_COMPARE" => "N",
+                        "DISPLAY_TOP_PAGER" => "N",
+                        "ELEMENT_SORT_FIELD" => "sort",
+                        "ELEMENT_SORT_FIELD2" => "id",
+                        "ELEMENT_SORT_ORDER" => "asc",
+                        "ELEMENT_SORT_ORDER2" => "desc",
+                        "ENLARGE_PRODUCT" => "STRICT",
+                        "FILTER_NAME" => "arrFilter",
+                        "IBLOCK_ID" => "10",
+                        "IBLOCK_TYPE" => "smscity_realty_catalog",
+                        "INCLUDE_SUBSECTIONS" => "Y",
+                        "LABEL_PROP" => array(
+                        ),
+                        "LAZY_LOAD" => "N",
+                        "LINE_ELEMENT_COUNT" => "3",
+                        "LOAD_ON_SCROLL" => "N",
+                        "MESSAGE_404" => "",
+                        "MESS_BTN_ADD_TO_BASKET" => "В корзину",
+                        "MESS_BTN_BUY" => "Купить",
+                        "MESS_BTN_DETAIL" => "Подробнее",
+                        "MESS_BTN_SUBSCRIBE" => "Подписаться",
+                        "MESS_NOT_AVAILABLE" => "Нет в наличии",
+                        "META_DESCRIPTION" => "-",
+                        "META_KEYWORDS" => "-",
+                        "OFFERS_LIMIT" => "5",
+                        "PAGER_BASE_LINK_ENABLE" => "N",
+                        "PAGER_DESC_NUMBERING" => "N",
+                        "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                        "PAGER_SHOW_ALL" => "N",
+                        "PAGER_SHOW_ALWAYS" => "N",
+                        "PAGER_TEMPLATE" => ".default",
+                        "PAGER_TITLE" => "Товары",
+                        "PAGE_ELEMENT_COUNT" => "18",
+                        "PARTIAL_PRODUCT_PROPERTIES" => "N",
+                        "PRICE_CODE" => array(
+                        ),
+                        "PRICE_VAT_INCLUDE" => "Y",
+                        "PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+                        "PRODUCT_ID_VARIABLE" => "id",
+                        "PRODUCT_PROPERTIES" => array(
+                        ),
+                        "PRODUCT_PROPS_VARIABLE" => "prop",
+                        "PRODUCT_QUANTITY_VARIABLE" => "quantity",
+                        "PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+                        "PROPERTY_CODE" => array(
+                            0 => "ADDRESS",
+                            1 => "",
+                        ),
+                        "PROPERTY_CODE_MOBILE" => array(
+                        ),
+                        "RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
+                        "RCM_TYPE" => "personal",
+                        "SECTION_CODE" => "",
+                        "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                        "SECTION_ID_VARIABLE" => "SECTION_ID",
+                        "SECTION_URL" => "",
+                        "SECTION_USER_FIELDS" => array(
+                            0 => "",
+                            1 => "",
+                        ),
+                        "SEF_MODE" => "N",
+                        "SET_BROWSER_TITLE" => "Y",
+                        "SET_LAST_MODIFIED" => "N",
+                        "SET_META_DESCRIPTION" => "Y",
+                        "SET_META_KEYWORDS" => "Y",
+                        "SET_STATUS_404" => "N",
+                        "SET_TITLE" => "Y",
+                        "SHOW_404" => "N",
+                        "SHOW_ALL_WO_SECTION" => "N",
+                        "SHOW_FROM_SECTION" => "N",
+                        "SHOW_PRICE_COUNT" => "1",
+                        "SHOW_SLIDER" => "Y",
+                        "SLIDER_INTERVAL" => "3000",
+                        "SLIDER_PROGRESS" => "N",
+                        "TEMPLATE_THEME" => "blue",
+                        "USE_ENHANCED_ECOMMERCE" => "N",
+                        "USE_MAIN_ELEMENT_SECTION" => "N",
+                        "USE_PRICE_COUNT" => "N",
+                        "USE_PRODUCT_QUANTITY" => "N",
+                        "COMPONENT_TEMPLATE" => "catalog_section"
+                    ),
+                    false
+                );?>
+            </div>
+        </section>
+        <section class="company company_residential_complex">
+            <div class="wrap">
+                <h2 class="h-title">
+                    Почему через нас покупать выгодно
+                </h2>
+                <div class="company__numbers">
+                    <div class="company__numbers__item">
+                        <div class="big">
+                            6.5
+                            <span>
+                                        млн. м<sup> 2</sup>
+                                    </span>
+                        </div>
+                        <div class="small">
+                            Совокупный объем проектов
+                            за 14 лет
+                        </div>
+                    </div>
+                    <div class="company__numbers__item">
+                        <div class="big">
+                            22
+                            <span>
+                                        Проекта
+                                    </span>
+                        </div>
+                        <div class="small">
+                            В стадии релализации
+                        </div>
+                    </div>
+                    <div class="company__numbers__item">
+                        <div class="big">
+                            22
+                            <span>
+                                        Проекта
+                                    </span>
+                        </div>
+                        <div class="small">
+                            В стадии релализации
+                        </div>
+                    </div>
+                    <div class="company__numbers__item">
+                        <div class="big">
+                            6.5
+                            <span>
+                                        млн. м<sup> 2</sup>
+                                    </span>
+                        </div>
+                        <div class="small">
+                            Совокупный объем проектов
+                            за 14 лет
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
-            <? $APPLICATION->IncludeComponent(
-        	"bitrix:catalog.section",
-        	"",
-        	Array(
-        		"ACTION_VARIABLE" => "action",
-        		"ADD_PICT_PROP" => "-",
-        		"ADD_PROPERTIES_TO_BASKET" => "Y",
-        		"ADD_SECTIONS_CHAIN" => "N",
-        		"AJAX_MODE" => "N",
-        		"AJAX_OPTION_ADDITIONAL" => "",
-        		"AJAX_OPTION_HISTORY" => "N",
-        		"AJAX_OPTION_JUMP" => "N",
-        		"AJAX_OPTION_STYLE" => "Y",
-        		"BACKGROUND_IMAGE" => "-",
-        		"BASKET_URL" => "/personal/basket.php",
-        		"BROWSER_TITLE" => "-",
-        		"CACHE_FILTER" => "N",
-        		"CACHE_GROUPS" => "Y",
-        		"CACHE_TIME" => "36000000",
-        		"CACHE_TYPE" => "A",
-        		"COMPATIBLE_MODE" => "Y",
-        		"DETAIL_URL" => "/catalog/detail?ID=#ELEMENT_ID#",
-        		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
-        		"DISPLAY_BOTTOM_PAGER" => "Y",
-        		"DISPLAY_COMPARE" => "N",
-        		"DISPLAY_TOP_PAGER" => "N",
-        		"ELEMENT_SORT_FIELD" => "sort",
-        		"ELEMENT_SORT_FIELD2" => "id",
-        		"ELEMENT_SORT_ORDER" => "asc",
-        		"ELEMENT_SORT_ORDER2" => "desc",
-        		"ENLARGE_PRODUCT" => "STRICT",
-        		"FILTER_NAME" => "arrFilter",
-        		"IBLOCK_ID" => "10",
-        		"IBLOCK_TYPE" => "smscity_realty_catalog",
-        		"INCLUDE_SUBSECTIONS" => "Y",
-        		"LABEL_PROP" => array(),
-        		"LAZY_LOAD" => "N",
-        		"LINE_ELEMENT_COUNT" => "3",
-        		"LOAD_ON_SCROLL" => "N",
-        		"MESSAGE_404" => "",
-        		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
-        		"MESS_BTN_BUY" => "Купить",
-        		"MESS_BTN_DETAIL" => "Подробнее",
-        		"MESS_BTN_SUBSCRIBE" => "Подписаться",
-        		"MESS_NOT_AVAILABLE" => "Нет в наличии",
-        		"META_DESCRIPTION" => "-",
-        		"META_KEYWORDS" => "-",
-        		"OFFERS_LIMIT" => "5",
-        		"PAGER_BASE_LINK_ENABLE" => "N",
-        		"PAGER_DESC_NUMBERING" => "N",
-        		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-        		"PAGER_SHOW_ALL" => "N",
-        		"PAGER_SHOW_ALWAYS" => "N",
-        		"PAGER_TEMPLATE" => ".default",
-        		"PAGER_TITLE" => "Товары",
-        		"PAGE_ELEMENT_COUNT" => "18",
-        		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-        		"PRICE_CODE" => array(),
-        		"PRICE_VAT_INCLUDE" => "Y",
-        		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-        		"PRODUCT_ID_VARIABLE" => "id",
-        		"PRODUCT_PROPERTIES" => array(),
-        		"PRODUCT_PROPS_VARIABLE" => "prop",
-        		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
-        		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-        		"PROPERTY_CODE" => array("ADDRESS",""),
-        		"PROPERTY_CODE_MOBILE" => array(),
-        		"RCM_PROD_ID" => $_REQUEST["PRODUCT_ID"],
-        		"RCM_TYPE" => "personal",
-        		"SECTION_CODE" => "",
-        		"SECTION_ID" => $_REQUEST["SECTION_ID"],
-        		"SECTION_ID_VARIABLE" => "SECTION_ID",
-        		"SECTION_URL" => "",
-        		"SECTION_USER_FIELDS" => array("",""),
-        		"SEF_MODE" => "N",
-        		"SET_BROWSER_TITLE" => "Y",
-        		"SET_LAST_MODIFIED" => "N",
-        		"SET_META_DESCRIPTION" => "Y",
-        		"SET_META_KEYWORDS" => "Y",
-        		"SET_STATUS_404" => "N",
-        		"SET_TITLE" => "Y",
-        		"SHOW_404" => "N",
-        		"SHOW_ALL_WO_SECTION" => "N",
-        		"SHOW_FROM_SECTION" => "N",
-        		"SHOW_PRICE_COUNT" => "1",
-        		"SHOW_SLIDER" => "Y",
-        		"SLIDER_INTERVAL" => "3000",
-        		"SLIDER_PROGRESS" => "N",
-        		"TEMPLATE_THEME" => "blue",
-        		"USE_ENHANCED_ECOMMERCE" => "N",
-        		"USE_MAIN_ELEMENT_SECTION" => "N",
-        		"USE_PRICE_COUNT" => "N",
-        		"USE_PRODUCT_QUANTITY" => "N"
-        	)
-        );?>
 
         <section class="faq">
             <div class="wrap">
