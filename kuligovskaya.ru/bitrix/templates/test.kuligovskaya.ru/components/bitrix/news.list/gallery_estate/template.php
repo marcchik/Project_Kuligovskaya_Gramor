@@ -16,14 +16,16 @@ $this->setFrameMode(true);
                 <div data-src="<?=$arItem["DETAIL_PICTURE"]['SRC'] ?>"
                      class="main-gallery__item lazyload">
                     <div class="main-gallery__item__text"><?=$arItem['NAME']?></div>
+                    <?if($arItem["PROPERTIES"]['VIDEO']['VALUE']):?>
                     <div class="main-gallery__item__play">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 3L19 12L5 21V3Z" fill="white"/>
                         </svg>
                     </div>
-                    <a class="main-gallery__item__link" href="<?= SITE_TEMPLATE_PATH ?>/video/1.mp4"
+                    <a class="main-gallery__item__link" href="<?=CFile::GetFileArray($arItem["PROPERTIES"]['VIDEO']['VALUE'])['SRC']?>"
                        data-fslightbox="video"
-                       data-video-poster="https://fslightbox.com/img/bbunny.png"></a>
+                       data-video-poster="<?=$arItem["DETAIL_PICTURE"]['SRC']?>"></a>
+                    <?endif;?>
                 </div>
             </div>
         <? endforeach; ?>

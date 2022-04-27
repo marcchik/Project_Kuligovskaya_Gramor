@@ -163,19 +163,19 @@
                                     <a href="/aggregator">Новостройки</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?SECTION_ID=16">Городская недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=140">Городская недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?SECTION_ID=17">Загородная недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=141">Загородная недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?SECTION_ID=18">Коммерческая недвижимость</a>
+                                    <a href="/catalog?SECTION_ID=142">Коммерческая недвижимость</a>
                                 </li>
                                 <li>
-                                    <a href="/catalog?SECTION_ID=119">Москва</a>
+                                    <a href="/catalog?SECTION_ID=145">Москва</a>
                                 </li>
                                 <li>
-                                    <a href="#">Зарубежная</a>
+                                    <a href="/catalog?SECTION_ID=143">Зарубежная</a>
                                 </li>
                             </ul>
                         </nav>
@@ -227,19 +227,19 @@
                     <a href="/aggregator">Новостройки</a>
                 </li>
                 <li>
-                    <a href="/catalog?SECTION_ID=16">Городская недвижимость</a>
+                    <a href="/catalog?SECTION_ID=140">Городская недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?SECTION_ID=17">Загородная недвижимость</a>
+                    <a href="/catalog?SECTION_ID=141">Загородная недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?SECTION_ID=18">Коммерческая недвижимость</a>
+                    <a href="/catalog?SECTION_ID=142">Коммерческая недвижимость</a>
                 </li>
                 <li>
-                    <a href="/catalog?SECTION_ID=119">Москва</a>
+                    <a href="/catalog?SECTION_ID=145">Москва</a>
                 </li>
                 <li>
-                    <a href="#">Зарубежная</a>
+                    <a href="/catalog?SECTION_ID=143">Зарубежная</a>
                 </li>
             </ul>
             <div class="mob-nav__bot">

@@ -6,7 +6,8 @@ $APPLICATION->SetTitle("Новости");
     <main class="main" id="main">
         <div class="inner-page">
             <section class="news inner-decor">
-                <? $APPLICATION->IncludeComponent(
+                <div class="wrap">
+                    <? $APPLICATION->IncludeComponent(
                         "bitrix:news.list",
                         "newslist",
                         array(
@@ -23,7 +24,7 @@ $APPLICATION->SetTitle("Новости");
                             "CACHE_TYPE" => "A",
                             "CHECK_DATES" => "Y",
                             "COMPONENT_TEMPLATE" => "newslist",
-                            "DETAIL_URL" => "/news/detail?ID=#ELEMENT_ID#",
+                            "DETAIL_URL" => "/news/detail/#ELEMENT_ID#",
                             "DISPLAY_BOTTOM_PAGER" => "Y",
                             "DISPLAY_DATE" => "Y",
                             "DISPLAY_NAME" => "Y",
@@ -36,8 +37,8 @@ $APPLICATION->SetTitle("Новости");
                             ),
                             "FILTER_NAME" => "",
                             "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                            "IBLOCK_ID" => "4",
-                            "IBLOCK_TYPE" => "smscity_realty_content",
+                            "IBLOCK_ID" => "54",
+                            "IBLOCK_TYPE" => "kuligovskaya_content",
                             "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
                             "INCLUDE_SUBSECTIONS" => "Y",
                             "MESSAGE_404" => "",
@@ -72,6 +73,7 @@ $APPLICATION->SetTitle("Новости");
                         ),
                         false
                     ); ?>
+                </div>
             </section>
         </div>
 

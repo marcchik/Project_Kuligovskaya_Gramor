@@ -5,8 +5,8 @@
         </div>
         <div class="footer__top">
             <div class="header__wrap">
-                <a href="index.html" class="logo">
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/img/main/logo.svg">
+                <a href="/" class="logo">
+                    <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/logo.svg">
                 </a>
                 <div class="header__des">
                     <div class="header__row">
@@ -138,16 +138,21 @@
                 </div>
                 <div class="header__mob">
                     <a href="" class="header__mob__phone">
-                        <svg width="14" height="14">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#phone"></use>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.11539 6.83838V8.21338C9.1159 8.34102 9.08976 8.46737 9.03862 8.58433C8.98748 8.70128 8.91248 8.80627 8.81842 8.89256C8.72436 8.97886 8.61332 9.04456 8.4924 9.08545C8.37148 9.12634 8.24335 9.14153 8.11622 9.13004C6.70585 8.9768 5.35109 8.49486 4.1608 7.72296C3.05339 7.01926 2.1145 6.08037 1.4108 4.97296C0.63621 3.77726 0.154165 2.41592 0.00372016 0.999211C-0.00773336 0.872467 0.00732949 0.744726 0.0479495 0.624122C0.0885695 0.503518 0.153857 0.392694 0.239655 0.298704C0.325452 0.204715 0.429881 0.12962 0.546291 0.0782003C0.662701 0.0267811 0.788543 0.000164281 0.915804 4.44365e-05H2.2908C2.51324 -0.00214477 2.72887 0.0766221 2.89753 0.221664C3.06618 0.366705 3.17634 0.568124 3.20747 0.788378C3.26551 1.22841 3.37313 1.66046 3.5283 2.07629C3.58997 2.24034 3.60332 2.41863 3.56676 2.59003C3.53021 2.76143 3.44528 2.91876 3.32205 3.04338L2.73997 3.62546C3.39243 4.77292 4.34251 5.723 5.48997 6.37546L6.07205 5.79338C6.19667 5.67015 6.354 5.58522 6.5254 5.54867C6.6968 5.51212 6.87509 5.52546 7.03914 5.58713C7.45497 5.7423 7.88702 5.84993 8.32705 5.90796C8.5497 5.93937 8.75303 6.05151 8.89838 6.22306C9.04373 6.39461 9.12096 6.6136 9.11539 6.83838Z" fill="white"/>
                         </svg>
+
                     </a>
                     <button type="button" class="burger btn-reset" id="burger-footer">
-                        <svg width="18" height="10" class="burger-open">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-open"></use>
+                        <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 0.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 5.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 10.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <svg width="24" height="24" class="burger-close">
-                            <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+
+                        <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </div>
@@ -170,9 +175,11 @@
             <div class="footer__bot__item">
                 Все права защищены
             </div>
-            <div class="footer__bot__item">
-                Сайт разработан в Gramor
-            </div>
+            <a href="https://gramor.ru/">
+                <div class="footer__bot__item">
+                    Сайт разработан в Gramor
+                </div>
+            </a>
         </div>
     </div>
 </footer>
@@ -182,8 +189,9 @@
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active"
                         onclick="CloseModal('ask_questions')">
-                    <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+                    <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
@@ -246,8 +254,9 @@
         <form class="content_modal_form">
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('ask_viewing')">
-                    <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+                    <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
@@ -324,8 +333,9 @@
         <form class="content_modal_form">
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('info_modal')">
-                    <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+                    <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
@@ -353,9 +363,11 @@
         <form class="content_modal_form">
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('sank_ask')">
-                    <svg width="24" height="24" class="burger-close">
-                        <use xlink:href="<?= SITE_TEMPLATE_PATH ?>/img/sprite.svg#burger-close"></use>
+                    <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+
                 </button>
             </div>
             <div class="title_modal_form">Спасибо за заявку!</div>

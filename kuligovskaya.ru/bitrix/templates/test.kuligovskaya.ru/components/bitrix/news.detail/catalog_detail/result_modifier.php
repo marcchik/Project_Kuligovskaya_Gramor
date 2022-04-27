@@ -39,3 +39,7 @@ foreach ($arResult['PROPERTIES']['PICTURES']['VALUE'] as $number => $photoID) {
     $arResult['PROPERTIES']['PICTURES']['VALUE'][$number] = $arImage['SRC'];
 }
 
+// ссылки на видео
+$arVideo = CFile::GetFileArray($arResult['PROPERTIES']['VIDEO']['VALUE']);
+$arResult['PROPERTIES']['VIDEO']['SRC'] = $arVideo['SRC'];
+

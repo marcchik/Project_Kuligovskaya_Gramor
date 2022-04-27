@@ -10,7 +10,7 @@ $this->setFrameMode(true);
             Акции
         </li>
     </ul>
-    <div class="main-tabs__wrap">sa
+    <div class="main-tabs__wrap">
         <div class="main-tabs__content active">
             <div class="custom-swiper promo">
                 <div class="swiper-wrapper">

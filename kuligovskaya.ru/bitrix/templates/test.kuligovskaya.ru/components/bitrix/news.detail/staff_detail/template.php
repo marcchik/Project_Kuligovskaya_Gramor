@@ -4,10 +4,9 @@ $this->setFrameMode(true);
 
 <div class="staff-detail__wrap">
     <div class="staff-detail__img">
-        <img src="<?=$arResult['DETAIL_PICTURE']['SRC']?>" alt="<?=$arResultS['DETAIL_PICTURE']['ALT']?>">
+        <img src="<?=$arResult['PREVIEW_PICTURE']['SRC']?>" alt="<?=$arResultS['PREVIEW_PICTURE']['ALT']?>">
     </div>
     <div class="staff-detail__content">
-
         <div class="staff-detail__status">
             <?=$arResult['PROPERTIES']['POST']['VALUE']?>
         </div>

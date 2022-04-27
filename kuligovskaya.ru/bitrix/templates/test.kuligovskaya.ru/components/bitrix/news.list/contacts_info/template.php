@@ -11,23 +11,32 @@ if(empty($arResult)) return;
     ?>
 
     <div class="contacts_items" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
-        <div class="contacts_item">
-            <div class="mini_title_contacts_item">Контактный номер:</div>
-            <div class="title_contacts_item"><?=$arItem['PROPERTIES']['PHONE']['VALUE']?></div>
-            <div class="work_time_items">
-                <div class="work_time_item"><?=$arItem['PROPERTIES']['WORKTIME']['VALUE']?></div>
+        <?if($arItem['PROPERTIES']['PHONE']['VALUE']):?>
+            <div class="contacts_item">
+                <div class="mini_title_contacts_item">Контактный номер:</div>
+                <div class="title_contacts_item"><?=$arItem['PROPERTIES']['PHONE']['VALUE']?></div>
+                <div class="work_time_items">
+                    <div class="work_time_item"><?=$arItem['PROPERTIES']['WORKTIME_B']['VALUE']?></div>
+                </div>
             </div>
-        </div>
-        <div class="contacts_item">
-            <div class="mini_title_contacts_item">Адрес:</div>
-            <div class="title_contacts_item"><?=$arItem['PROPERTIES']['CITY']['VALUE']?>, <?=$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
-            <div class="work_time_items">
-                <div class="work_time_item"><?=$arItem['PROPERTIES']['WORKTIME']['VALUE']?></div>
+        <?endif;?>
+        <?if($arItem['PROPERTIES']['CITY']['VALUE'] || $arItem['PROPERTIES']['ADDRESS']['VALUE']):?>
+            <div class="contacts_item">
+                <div class="mini_title_contacts_item">Адрес:</div>
+                <div class="title_contacts_item"><?=$arItem['PROPERTIES']['CITY']['VALUE']?>, <?=$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
+                <div class="work_time_items">
+                    <div class="work_time_item">
+                        <?=$arItem['PROPERTIES']['WORKTIME_B']['VALUE']?><br>
+                        <?=$arItem['PROPERTIES']['WORKTIME_F']['VALUE']?>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="contacts_item">
-            <div class="mini_title_contacts_item">Контактный e-mail:</div>
-            <div class="title_contacts_item"><?=$arItem['PROPERTIES']['EMAIL']['VALUE']?></div>
-        </div>
+        <?endif;?>
+        <?if($arItem['PROPERTIES']['EMAIL']['VALUE']):?>
+            <div class="contacts_item">
+                <div class="mini_title_contacts_item">Контактный e-mail:</div>
+                <div class="title_contacts_item"><?=$arItem['PROPERTIES']['EMAIL']['VALUE']?></div>
+            </div>
+        <?endif;?>
     </div>
 <? endforeach; ?>

@@ -1,8 +1,11 @@
 <? if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
-$count = 0
+if(empty($arResult)) return;
+$count = 0;
 ?>
-
+<div class="h-title">
+    Мои объекты
+</div>
 <div class="custom-swiper promo">
     <div class="swiper-wrapper">
         <? foreach($arResult["ITEMS"] as $arItem): ?>

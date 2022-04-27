@@ -12,7 +12,7 @@ $count = 0;
         <div class="staff__list">
             <? foreach($arResult["ITEMS"] as $arItem): ?>
                 <?
-                if($arItem['IBLOCK_SECTION_ID'] == 14) continue;
+                if($arItem['IBLOCK_SECTION_ID'] == 148) continue;
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>
@@ -34,7 +34,7 @@ $count = 0;
         <div class="staff__list">
             <? foreach($arResult["ITEMS"] as $arItem): ?>
                 <?
-                if($arItem['IBLOCK_SECTION_ID'] == 13) continue;
+                if($arItem['IBLOCK_SECTION_ID'] == 147) continue;
                 $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
                 $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
                 ?>

@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 
 $arViewModeList = $arResult['VIEW_MODE_LIST'];
-pr($arParams['VIEW_MODE']);
+
 $arViewStyles = array(
 	'LIST' => array(
 		'CONT' => 'bx_sitemap',

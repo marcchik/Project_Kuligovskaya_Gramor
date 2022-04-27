@@ -24,7 +24,7 @@ if(empty($arResult)) return;
                                     <div class="main-slider__item__text">
                                         <?=$arItem['PREVIEW_TEXT']?>
                                     </div>
-                                    <a href="" class="btn">Подробнее</a>
+                                    <a href="<?=$arItem['PROPERTIES']['LINK']['VALUE']?>" class="btn">Подробнее</a>
                                 </div>
 
                             </div>

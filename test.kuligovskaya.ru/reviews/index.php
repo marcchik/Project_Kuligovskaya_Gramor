@@ -13,6 +13,21 @@ $APPLICATION->SetTitle("Отзывы");
                     <div class="review__top__row">
                         4.3
                         <div class="stars">
+                            <svg width="22" height="22">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                            </svg>
+                            <svg width="22" height="22">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                            </svg>
+                            <svg width="22" height="22">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                            </svg>
+                            <svg width="22" height="22">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                            </svg>
+                            <svg width="22" height="22">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -37,6 +52,21 @@ $APPLICATION->SetTitle("Отзывы");
                                     </div>
                                 </div>
                                 <div class="stars">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
                                 </div>
                                 <div class="reviews__item__des">
                                     <div class="reviews__item__des__text">
@@ -75,6 +105,21 @@ $APPLICATION->SetTitle("Отзывы");
                                     </div>
                                 </div>
                                 <div class="stars">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
                                 </div>
                                 <div class="reviews__item__des">
                                     <div class="reviews__item__des__text">
@@ -113,6 +158,21 @@ $APPLICATION->SetTitle("Отзывы");
                                     </div>
                                 </div>
                                 <div class="stars">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
                                 </div>
                                 <div class="reviews__item__des">
                                     <div class="reviews__item__des__text">
@@ -151,6 +211,21 @@ $APPLICATION->SetTitle("Отзывы");
                                     </div>
                                 </div>
                                 <div class="stars">
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
+                                    <svg width="22" height="22">
+                                        <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#star-full"></use>
+                                    </svg>
                                 </div>
                                 <div class="reviews__item__des">
                                     <div class="reviews__item__des__text">
@@ -174,8 +249,14 @@ $APPLICATION->SetTitle("Отзывы");
                 </div>
                 <div class="pagination">
                     <div class="pagination__left">
-                        <a href="javascript:" class="active">1</a> <a href="">2</a> <a href="">3</a> <a href="">4</a> <a
-                                href="">5</a> <a href="">6</a> <a href="">7</a> <a href="">8</a>
+                        <a href="javascript:" class="active">1</a>
+                        <a href="" class="">2</a>
+                        <a href="" class="">3</a>
+                        <a href="" class="">4</a>
+                        <a href="" class="">5</a>
+                        <a href="" class="">6</a>
+                        <a href="" class="">7</a>
+                        <a href="" class="">8</a>
                     </div>
                     <div class="pagination__select">
                         <div class="custom-select">
@@ -185,10 +266,19 @@ $APPLICATION->SetTitle("Отзывы");
                                 <option>Показывать по 20</option>
                                 <option>Показывать по 50</option>
                             </select>
-                        </div>
+                            <div class="select-selected">Показывать по 10</div><div class="select-items select-hide"><div>Показывать по 10</div><div>Показывать по 20</div><div>Показывать по 50</div></div></div>
                     </div>
                     <div class="pagination__arows">
-                        <a href=""> </a> <a href=""> </a>
+                        <a href="">
+                            <svg width="7.5" height="15">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#arr-left"></use>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg width="7.5" height="15">
+                                <use xlink:href="/bitrix/templates/test.kuligovskaya.ru/img/sprite.svg#arr-right"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="reviews_form">
