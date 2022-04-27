@@ -296,12 +296,11 @@ $containerName = 'container-'.$navParams['NavNum'];
             <div class="select-selected">Сортировка</div><div class="select-items select-hide"><div>Сортировка</div><div>По дате</div></div></div>
     </div>
     <div class="items_box_catalog">
-        <? $count = 0; ?>
         <? foreach($arResult['ITEMS'] as $arItem): ?>
             <?
             $count++;
-            if ($count < 4) {
-                continue;
+            if ($count > 3) {
+                break;
             };
             $uniqueId = $arItem['ID'].'_'.md5($this->randString().$component->getAction());
             $areaIds[$arItem['ID']] = $this->GetEditAreaId($uniqueId);
@@ -333,7 +332,9 @@ $containerName = 'container-'.$navParams['NavNum'];
                 </div>
                 <div class="info_item_box_catalog">
                     <div class="top_info_item_box_catalog">
-                        <div class="title_top_info_item_box_catalog"><?=$arItem['NAME']?></div>
+                        <a href="<?=$arItem['DETAIL_PAGE_URL']?>">
+                            <div class="title_top_info_item_box_catalog"><?=$arItem['NAME']?></div>
+                        </a>
                         <div class="params_top_info_item_box_catalog">
                             <div class="item_param_top_info_item_box_catalog">Мат. капитал</div>
                             <div class="item_param_top_info_item_box_catalog">Низкие проценты</div>
@@ -341,47 +342,58 @@ $containerName = 'container-'.$navParams['NavNum'];
                     </div>
                     <div class="bottom_info_item_box_catalog">
                         <div class="left_bottom_info_item_box_catalog">
-                            <div class="adress_box">
-                                <div class="mini_title_adress_box">Адрес:</div>
-                                <div class="text_adress_box">г.<?=$arItem['PROPERTIES']['CITY']['VALUE'].", ".$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
-                            </div>
-                            <div class="company_box">
-                                <div class="mini_title_company_box">Строительная компания:</div>
-                                <div class="logo_name_company_box">
-                                    <div class="logo_company_box">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="name_company_box">“Поляна”</div>
+                            <?if($arItem['PROPERTIES']['CITY']['VALUE']):?>
+                                <div class="adress_box">
+                                    <div class="mini_title_adress_box">Адрес:</div>
+                                    <div class="text_adress_box"><?=$arItem['PROPERTIES']['CITY']['VALUE'].", ".$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
                                 </div>
-                            </div>
+                            <?endif;?>
+                            <?if($arItem['PROPERTIES']['CITY']['VALUE'] && $arItem['PROPERTIES']['ADDRESS']['VALUE']):?>
+                                <div class="company_box">
+                                    <div class="mini_title_company_box">ЖК:</div>
+                                    <div class="logo_name_company_box">
+                                        <div class="logo_company_box">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="name_company_box">“Поляна”</div>
+                                    </div>
+                                </div>
+                            <?endif;?>
                             <div class="params_item_catalog">
-                                <div class="item_params_item_catalog">
-                                    <div class="mini_title_item_params_item_catalog">Метраж:</div>
-                                    <div class="icon_text_item_params_item_catalog">
-                                        <div class="icon_item_params_item_catalog">
-                                            <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/bx_bx-area.svg" alt="">
+                                <?if($arItem['PROPERTIES']['SQUARE']['VALUE']):?>
+                                    <div class="item_params_item_catalog">
+                                        <div class="mini_title_item_params_item_catalog">Метраж:</div>
+                                        <div class="icon_text_item_params_item_catalog">
+                                            <div class="icon_item_params_item_catalog">
+                                                <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/bx_bx-area.svg" alt="">
+                                            </div>
+                                            <div class="text_item_params_item_catalog"><?=$arItem['PROPERTIES']['SQUARE']['VALUE']?> м<sup>2</sup></div>
                                         </div>
-                                        <div class="text_item_params_item_catalog"><?=$arItem['PROPERTIES']['SQUARE']['VALUE']?> м<sup>2</sup></div>
                                     </div>
-                                </div>
-                                <div class="item_params_item_catalog">
-                                    <div class="mini_title_item_params_item_catalog">Этаж:</div>
-                                    <div class="icon_text_item_params_item_catalog">
-                                        <div class="icon_item_params_item_catalog">
-                                            <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/ep_house.svg" alt="">
+                                <?endif;?>
+
+                                <?if($arItem['PROPERTIES']['FLOOR']['VALUE'] && $arItem['PROPERTIES']['FLOORS']['VALUE']):?>
+                                    <div class="item_params_item_catalog">
+                                        <div class="mini_title_item_params_item_catalog">Этаж:</div>
+                                        <div class="icon_text_item_params_item_catalog">
+                                            <div class="icon_item_params_item_catalog">
+                                                <img src="/bitrix/templates/test.kuligovskaya.ru/img/main/ep_house.svg" alt="">
+                                            </div>
+                                            <div class="text_item_params_item_catalog"><?=$arItem['PROPERTIES']['FLOOR']['VALUE']?>/<?=$arItem['PROPERTIES']['FLOORS']['VALUE']?>  этаж</div>
                                         </div>
-                                        <div class="text_item_params_item_catalog"><?=$arItem['PROPERTIES']['FLOOR']['VALUE']?>/<?=$arItem['PROPERTIES']['FLOORS']['VALUE']?>  этаж</div>
                                     </div>
-                                </div>
+                                <?endif;?>
                             </div>
                         </div>
                         <div class="right_bottom_info_item_box_catalog">
-                            <div class="price_box_right_bottom_info_catalog">
-                                <div class="mini_title_price_box_right_bottom_info_catalog">Цена:</div>
-                                <div class="full_price_price_box_right_bottom_info_catalog"><?=strrev(chunk_split(strrev($arItem['PROPERTIES']['PRICE']['VALUE']), 3, ' '))?> Р</div>
-                            </div>
+                            <?if($arItem['PROPERTIES']['PRICE']['VALUE']):?>
+                                <div class="price_box_right_bottom_info_catalog">
+                                    <div class="mini_title_price_box_right_bottom_info_catalog">Цена:</div>
+                                    <div class="full_price_price_box_right_bottom_info_catalog"><?=strrev(chunk_split(strrev($arItem['PROPERTIES']['PRICE']['VALUE']), 3, ' '))?> Р</div>
+                                </div>
+                            <?endif;?>
                             <div class="btn_price_box_right_bottom_info_catalog" onclick="OpenModal('ask_viewing')">Оставить заявку</div>
-                            <div class="mini_btn_ipoteka_bottom_info_catalog" onclick="OpenModal('info_modal')">Ипотека</div>
+                            <div class="mini_btn_ipoteka_bottom_info_catalog" onclick="OpenModal('ask_viewing')">Ипотека</div>
                         </div>
                     </div>
                 </div>
