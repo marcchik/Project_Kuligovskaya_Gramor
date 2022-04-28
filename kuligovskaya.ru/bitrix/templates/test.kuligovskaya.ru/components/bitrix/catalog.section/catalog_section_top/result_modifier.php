@@ -8,3 +8,7 @@
 $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
 
+foreach($arResult["ITEMS"] as $key => $arItem) {
+    $res = CIBlockElement::GetByID($arItem['PROPERTIES']['GK']['VALUE']);
+    $arResult['ITEMS'][$key]['PROPERTIES']['GK']['NAME'] = $res->GetNext()['NAME'];
+}

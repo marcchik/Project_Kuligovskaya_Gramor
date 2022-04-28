@@ -15,6 +15,8 @@
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/vendor.js" );
     $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/main.js" );
 
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/js/mask_tel.js" );
+
     //Подключение css
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/vendor.css", true);
     $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/main.css", true);

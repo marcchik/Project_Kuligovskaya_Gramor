@@ -360,7 +360,7 @@ $APPLICATION->SetTitle("Каталог");
                                       fill="white"/>
                             </svg>
 
-                            <input type="phone" placeholder="Ваш номер телефон">
+                            <input type="phone" id="phone" placeholder="Ваш номер телефон">
                         </div>
                         <div class="btn btn-white" onclick="OpenModal('sank_ask')">
                             Оставить заявку
@@ -377,4 +377,7 @@ $APPLICATION->SetTitle("Каталог");
             </div>
         </section>
     </div>
+    <script type="text/javascript">
+        $("#phone").mask("+7 (999) 999-99-99");
+    </script>
     </main><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

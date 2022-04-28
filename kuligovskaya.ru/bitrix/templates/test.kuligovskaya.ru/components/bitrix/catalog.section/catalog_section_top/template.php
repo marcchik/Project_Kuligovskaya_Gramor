@@ -348,14 +348,20 @@ $containerName = 'container-'.$navParams['NavNum'];
                                     <div class="text_adress_box"><?=$arItem['PROPERTIES']['CITY']['VALUE'].", ".$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
                                 </div>
                             <?endif;?>
-                            <?if($arItem['PROPERTIES']['CITY']['VALUE'] && $arItem['PROPERTIES']['ADDRESS']['VALUE']):?>
+                            <?if($arItem['PROPERTIES']['GK']['VALUE']):?>
                                 <div class="company_box">
                                     <div class="mini_title_company_box">ЖК:</div>
                                     <div class="logo_name_company_box">
                                         <div class="logo_company_box">
-                                            <img src="" alt="">
+                                            <? if($arItem['PROPERTIES']['LOGO']['VALUE']) :?>
+                                                <img src="" alt="ЖК">
+                                            <? endif; ?>
                                         </div>
-                                        <div class="name_company_box">“Поляна”</div>
+                                        <? if($arItem['PROPERTIES']['GK']['NAME']) :?>
+                                            <a href="/catalog/gk?ID=<?=$arItem['PROPERTIES']['GK']['VALUE']?>">
+                                                <div class="name_company_box">“<?=$arItem['PROPERTIES']['GK']['NAME']?>”</div>
+                                            </a>
+                                        <? endif; ?>
                                     </div>
                                 </div>
                             <?endif;?>

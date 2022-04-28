@@ -304,7 +304,7 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Ваш номер телефона">
+                    <input type="text" class="phone" placeholder="Ваш номер телефона">
                 </div>
             </div>
             <button class="btn_modal_form">Оставить заявку</button>
@@ -323,7 +323,7 @@
             <div class="box_title_photo_modal_form">
                 <div class="title_box_modal_form">Наши менеджеры свяжутся с вами в течение 15 минут</div>
                 <div class="photo_box_modal_form"
-                     style="background: url(/img/main/mask_78.png)no-repeat center;"></div>
+                     style="background: url(/bitrix/templates/test.kuligovskaya.ru/img/main/mask_78.png)no-repeat center;"></div>
             </div>
         </form>
     </div>
@@ -379,6 +379,9 @@
 </section>
 
 </div>
+<script type="text/javascript">
+    $(".phone").mask("+7 (999) 999-99-99");
+</script>
 </body>
 
 </html>
