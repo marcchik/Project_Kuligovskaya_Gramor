@@ -573,6 +573,7 @@ a {
   transition: 0.2s all;
   padding: 5px 0;
   position: relative;
+  text-decoration: none;
 }
 .bot-nav a:before {
   content: "";

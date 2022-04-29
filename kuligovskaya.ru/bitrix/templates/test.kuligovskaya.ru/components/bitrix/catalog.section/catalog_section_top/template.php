@@ -348,7 +348,7 @@ $containerName = 'container-'.$navParams['NavNum'];
                                     <div class="text_adress_box"><?=$arItem['PROPERTIES']['CITY']['VALUE'].", ".$arItem['PROPERTIES']['ADDRESS']['VALUE']?></div>
                                 </div>
                             <?endif;?>
-                            <?if($arItem['PROPERTIES']['GK']['VALUE']):?>
+                            <?if(empty($arItem['PROPERTIES']['GK']['VALUE'])):?>
                                 <div class="company_box">
                                     <div class="mini_title_company_box">ЖК:</div>
                                     <div class="logo_name_company_box">

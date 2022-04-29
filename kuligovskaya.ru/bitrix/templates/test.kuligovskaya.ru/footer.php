@@ -143,14 +143,14 @@
                         </svg>
 
                     </a>
-                    <button type="button" class="burger btn-reset" id="burger-footer">
+                    <button type="button" class="burger btn-reset" id="burger-footer" class="burger-open">
                         <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 0.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M19 5.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M19 10.5H1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
 
-                        <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="burger-close">
                             <path d="M18.7279 5.99998L6 18.7279" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M18.7279 18.7279L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -175,17 +175,16 @@
             <div class="footer__bot__item">
                 Все права защищены
             </div>
-            <a href="https://gramor.ru/">
-                <div class="footer__bot__item">
-                    Сайт разработан в Gramor
-                </div>
+            <a href="https://gramor.ru/" class="logo" style="margin-right: 0px;">
+                Разработка сайта
+                <img src="/bitrix/templates/test.kuligovskaya.ru/img/Group_238.png" alt="gramor">
             </a>
         </div>
     </div>
 </footer>
 <section class="modal_form" id="ask_questions">
     <div class="modal_form__wrap">
-        <form class="content_modal_form">
+        <form class="content_modal_form" id="askform">
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active"
                         onclick="CloseModal('ask_questions')">
@@ -212,7 +211,7 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" name="name" placeholder="Ваше имя">
                 </div>
                 <div class="input_icon_modal_form">
                     <div class="icon_modal_form">
@@ -227,13 +226,13 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Ваш E-mail">
+                    <input type="text" name="email" placeholder="Ваш E-mail">
                 </div>
                 <div class="textarea_modal_form">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Текст вопроса"></textarea>
+                    <textarea name="question" id="" cols="30" rows="10" placeholder="Текст вопроса"></textarea>
                 </div>
             </div>
-            <button class="btn_modal_form">Оставить заявку</button>
+            <button type="submit" class="btn btn-white" data-graph-animation="fadeIn">Оставить заявку</button>
             <div class="policy_modal_form">
                 <div class="label-cbx ">
                     <input type="radio" checked class="invisible">
@@ -246,7 +245,38 @@
                     <div>Я соглашаюсь на обработку <a href="">персональных данных</a></div>
                 </div>
             </div>
+            <div class="error-text"></div>
         </form>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $("#askform").submit(function(){
+                    var $that = $(this),
+                        formData = new FormData($that.get(0));
+                    $.ajax({
+                        contentType: false,
+                        processData: false,
+                        type: "POST",
+                        url: "/ajax/ask.php",
+                        data: formData,
+                        dataType: 'json',
+                        success: function(result){
+                            if(result.status=='success'){
+                                CloseModal('ask_questions');
+                                OpenModal('sank_ask');
+                            }else{
+                                document.querySelector(".error-text").style.textAlign = "center";
+                                document.querySelector(".error-text").style.marginTop = "10px";
+                                document.querySelector(".error-text").style.color = "#ef5241";
+                                document.querySelector('.error-text').textContent = result.mess;
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+
+        </script>
     </div>
 </section>
 <section class="modal_form" id="ask_viewing">
