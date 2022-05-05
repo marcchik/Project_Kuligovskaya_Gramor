@@ -357,6 +357,7 @@ $APPLICATION->SetTitle("Каталог");
                             </svg>
 
                             <input type="phone" name="phone" id="phone" placeholder="Ваш номер телефон">
+                            <div class="error-text"></div>
                         </div>
                         <button type="submit" class="btn btn-white" data-graph-animation="fadeIn">Оставить заявку</button>
                     </div>
@@ -385,7 +386,10 @@ $APPLICATION->SetTitle("Каталог");
                                     if(result.status=='success'){
                                         OpenModal('sank_ask');
                                     }else{
-                                        alert('Извините! Произошла ошибка.')
+                                        document.querySelector(".error-text").style.textAlign = "center";
+                                        document.querySelector(".error-text").style.marginTop = "10px";
+                                        document.querySelector(".error-text").style.color = "#ef5241";
+                                        document.querySelector('.error-text').textContent = result.mess;
                                     }
                                 }
                             });

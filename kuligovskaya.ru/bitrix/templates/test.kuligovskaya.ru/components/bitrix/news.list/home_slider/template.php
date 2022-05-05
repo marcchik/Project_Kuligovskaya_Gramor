@@ -17,14 +17,22 @@ if(empty($arResult)) return;
                         <div class="wrap">
                             <div class="main-slider__item__content">
                                 <div class="main-slider__item__content__wrap">
-                                    <div class="tag">Акция</div>
-                                    <div class="main-slider__item__title">
-                                        <?=$arItem['NAME']?>
-                                    </div>
-                                    <div class="main-slider__item__text">
-                                        <?=$arItem['PREVIEW_TEXT']?>
-                                    </div>
-                                    <a href="<?=$arItem['PROPERTIES']['LINK']['VALUE']?>" class="btn">Подробнее</a>
+                                    <?if(!empty($arItem['PROPERTIES']['TYPE']['VALUE'])):?>
+                                        <div class="tag">Акция</div>
+                                    <?endif;?>
+                                    <?if(!empty($arItem['NAME'])):?>
+                                        <div class="main-slider__item__title">
+                                            <?=$arItem['NAME']?>
+                                        </div>
+                                    <?endif;?>
+                                    <?if(!empty($arItem['PREVIEW_TEXT'])):?>
+                                        <div class="main-slider__item__text">
+                                            <?=$arItem['PREVIEW_TEXT']?>
+                                        </div>
+                                    <?endif;?>
+                                    <?if(!empty($arItem['PROPERTIES']['LINK']['VALUE']) && !empty($arItem['PROPERTIES']['BUTTON_TEXT']['VALUE'])):?>
+                                        <a href="<?=$arItem['PROPERTIES']['LINK']['VALUE']?>" class="btn"><?=$arItem['PROPERTIES']['BUTTON_TEXT']['VALUE']?></a>
+                                    <?endif;?>
                                 </div>
 
                             </div>

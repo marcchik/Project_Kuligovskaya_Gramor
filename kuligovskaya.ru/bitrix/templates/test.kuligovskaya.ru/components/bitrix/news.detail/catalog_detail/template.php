@@ -58,7 +58,7 @@ $this->setFrameMode(true);
             </div>
             <div class="info_box_irp">
                 <div class="company_info_irp">
-                    <div class="mini_title_company_info_irp">Строительная компания:</div>
+                    <div class="mini_title_company_info_irp">ЖК:</div>
                     <a class="logo_name_company_info_irp">
                         <img src="/bitrix/templates/test.kuligovskaya.ru/img/company_realty/1.png" alt=""
                              class="logo_company_info_irp">
@@ -82,7 +82,9 @@ $this->setFrameMode(true);
                     <div class="object_info_irp">
                         <div class="mini_title_object_info_irp">Цена:</div>
                         <div class="full_price_object_info_irp"><?= $arResult['PROPERTIES']['PRICE']['VALUE'] ?> Р</div>
-                        <div class="price_square_object_info_irp"><?=$arResult['PROPERTIES']['PRICE_METR']['VALUE']?> ₽/м<sup>2</sup></div>
+                        <?if($arResult['PROPERTIES']['SQUARE']['VALUE']):?>
+                            <div class="price_square_object_info_irp"><?=$arResult['PROPERTIES']['PRICE_METR']['VALUE']?> ₽/м<sup>2</sup></div>
+                        <?endif;?>
                         <div class="btn_object_info_irp" onclick="OpenModal('ask_viewing')">Оставить заявку</div>
                         <a class="ipoteka_object_info_irp" onclick="OpenModal('ask_viewing')">Рассчитать кредит по
                             ипотеке</a>

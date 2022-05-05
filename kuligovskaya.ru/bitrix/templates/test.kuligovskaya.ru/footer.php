@@ -281,7 +281,7 @@
 </section>
 <section class="modal_form" id="ask_viewing">
     <div class="modal_form__wrap">
-        <form class="content_modal_form">
+        <form class="content_modal_form" id="requestform">
             <div class="box_close_btn_modal_form">
                 <button type="button" class="close_modal_form btn-reset active" onclick="CloseModal('ask_viewing')">
                     <svg width="24" height="24" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +307,8 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="hidden" id="vakid" name="vakid" value="">
+                    <input type="text" name="name" placeholder="Ваше имя">
                 </div>
                 <div class="input_icon_modal_form">
                     <div class="icon_modal_form">
@@ -322,7 +323,7 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" placeholder="Ваш E-mail">
+                    <input type="text" name="email" placeholder="Ваш E-mail">
                 </div>
                 <div class="input_icon_modal_form">
                     <div class="icon_modal_form">
@@ -334,7 +335,7 @@
                             </g>
                         </svg>
                     </div>
-                    <input type="text" class="phone" placeholder="Ваш номер телефона">
+                    <input type="text" name="phone" class="phone" placeholder="Ваш номер телефона">
                 </div>
             </div>
             <button class="btn_modal_form">Оставить заявку</button>
@@ -355,7 +356,47 @@
                 <div class="photo_box_modal_form"
                      style="background: url(/bitrix/templates/test.kuligovskaya.ru/img/main/mask_78.png)no-repeat center;"></div>
             </div>
+            <div class="error-text"></div>
         </form>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                var a = document.querySelectorAll('.vak-button');
+                [].forEach.call( a, function(el) {
+                    el.onclick = function(e) {
+                        console.log(el.getAttribute('data-vakid'));
+                        document.getElementById('vakid').value = el.getAttribute('data-vakid');
+                    }
+                });
+
+                $("#requestform").submit(function(){
+
+                    var $that = $(this),
+                        formData = new FormData($that.get(0));
+                    $.ajax({
+                        contentType: false,
+                        processData: false,
+                        type: "POST",
+                        url: "/ajax/request.php",
+                        data: formData,
+                        dataType: 'json',
+                        success: function(result){
+                            if(result.status=='success'){
+                                CloseModal('ask_questions');
+                                OpenModal('sank_ask');
+                            }else{
+                                document.querySelector(".error-text").style.textAlign = "center";
+                                document.querySelector(".error-text").style.marginTop = "10px";
+                                document.querySelector(".error-text").style.color = "#ef5241";
+                                document.querySelector('.error-text').textContent = result.mess;
+                            }
+                        }
+                    });
+                    return false;
+                });
+            });
+
+        </script>
     </div>
 </section>
 <section class="modal_form" id="info_modal">

@@ -79,7 +79,7 @@ $this->setFrameMode(true);
                                     </div>
                                 </div>
                                 <div class="promo__item__bot">
-                                    <button type="button" onclick="OpenModal('ask_viewing')" class="btn-border">
+                                    <button type="button vak-button"  data-vakid="<?=$arItem['ID']?>" onclick="OpenModal('ask_viewing')" class="btn-border">
                                         Связаться
                                     </button>
                                     <a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="link">Подробнее</a>

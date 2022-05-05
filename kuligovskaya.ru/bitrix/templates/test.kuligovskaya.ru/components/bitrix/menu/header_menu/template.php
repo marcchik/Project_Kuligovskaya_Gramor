@@ -1,6 +1,48 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<style>
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .list-reset > li {
+        position: relative;
+    }
+
+    .submenu a {
+        margin: 10px;
+        display: inline-block;
+    }
+    .one .submenu {
+        background: #b19891;
+    }
+    .submenu {
+        position: absolute;
+        top: 100%;
+        z-index: 10;
+    }
+    .one .submenu {
+        display: none;
+    }
+    ul li:hover .submenu {
+        display: block;
+    }
+</style>
 
 <?
+CModule::IncludeModule('iblock');
+
+$serviceArray = array();
+
+$arSelect = Array();
+$arFilter = Array("IBLOCK_ID"=>65, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
+$res = CIBlockElement::GetList(Array(), $arFilter, false, Array("nPageSize"=>50), $arSelect);
+while($ob = $res->GetNextElement())
+{
+    $arFields = $ob->GetFields();
+    $serviceArray[] = $arFields['NAME'];
+}
 if ($arParams['ROOT_MENU_TYPE'] == 'top') {
     $arResult = array
     (
@@ -101,16 +143,27 @@ if ($arParams['ROOT_MENU_TYPE'] == 'top') {
     );
 }
 
-
 ?>
-<?if (!empty($arResult)):?>
+
+<nav class="one">
+    <?if (!empty($arResult)):?>
     <ul class="list-reset">
 
         <? foreach($arResult as $arItem):?>
             <li>
-                <a href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a>
+                <?if($arItem['TEXT'] != 'Услуги'):;?>
+                    <a href="<?=$arItem['LINK']?>"><?=$arItem['TEXT']?></a>
+                <?else:?>
+                    <a><?=$arItem['TEXT']?></a>
+                        <ul class="submenu">
+                            <?foreach ($serviceArray as $item):?>
+                                <a href="#"><?=$item?></a>
+                            <?endforeach;?>
+                        </ul>
+                <?endif;?>
             </li>
         <? endforeach; ?>
 
     </ul>
 <? endif; ?>
+</nav>
